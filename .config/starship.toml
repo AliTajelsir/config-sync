@@ -1,8 +1,8 @@
+add_newline = false
+
 [username]
 show_always = true
 
 [hostname]
 ssh_only = false
-prefix = "⟪"
-suffix = "⟫"
 disabled = false
