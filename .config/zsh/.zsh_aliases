@@ -1,0 +1,4 @@
+alias sudo='sudo '
+alias coursera-dl='coursera-dl -ca "$(cat ~/.config/coursera-ca)" --video-resolution 1080p'
+alias cfg='/usr/bin/git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
+alias img-writer='sudo dd bs=4M status=progress oflag=sync'
