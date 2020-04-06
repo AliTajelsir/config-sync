@@ -25,6 +25,7 @@ compinit
 
 setopt GLOBDOTS
 
+zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $HOME/.config/zsh/.zcompcache
@@ -32,6 +33,7 @@ zstyle ':completion:*' ignore-parents parent pwd
 
 # History
 
+HISTFILE=$HOME/.config/zsh/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
 
