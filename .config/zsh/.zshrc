@@ -1,25 +1,19 @@
 # Key binding by $terminfo
-
 source $HOME/.config/zsh/.zsh_key_bindings
 
 # Conditions
-
 source $HOME/.config/zsh/.zsh_conditions
 
 # Starship prompt
-
 eval "$(starship init zsh)"
 
 # Aliases
-
 source $HOME/.config/zsh/.zsh_aliases
 
 # Command not found handler
-
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Autocomplete
-
 autoload -Uz compinit
 compinit
 
@@ -32,7 +26,6 @@ zstyle ':completion::complete:*' cache-path $HOME/.config/zsh/.zcompcache
 zstyle ':completion:*' ignore-parents parent pwd
 
 # History
-
 HISTFILE=$HOME/.config/zsh/.zsh_history
 HISTSIZE=1000
 SAVEHIST=1000
@@ -54,7 +47,6 @@ setopt HIST_NO_STORE
 setopt HIST_NO_FUNCTIONS
 
 # Help command
-
 autoload -Uz run-help
 unalias run-help 2>/dev/null
 
@@ -67,5 +59,4 @@ autoload -Uz run-help-svk
 autoload -Uz run-help-svn
 
 # Plugins
-
 source $HOME/.config/zsh/.zsh_plugins

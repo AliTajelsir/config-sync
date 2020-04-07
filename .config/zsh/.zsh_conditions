@@ -1,5 +1,4 @@
 # Values from $terminfo are only valid in application mode
-
 if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 	autoload -Uz add-zle-hook-widget
 	function zle_application_mode_start {
@@ -13,7 +12,6 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 # Trap SIGUSR1 and rehash
-
 catch_signal_usr1() {
   trap catch_signal_usr1 USR1
   rehash

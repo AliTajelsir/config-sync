@@ -1,5 +1,4 @@
 # create a zkbd compatible hash;
-
 typeset -g -A key
 
 key[Home]="${terminfo[khome]}"
@@ -16,7 +15,6 @@ key[PageDown]="${terminfo[knp]}"
 key[Shift-Tab]="${terminfo[kcbt]}"
 
 # setup key accordingly
-
 [[ -n "${key[Home]}"      ]] && bindkey -- "${key[Home]}"      beginning-of-line
 [[ -n "${key[End]}"       ]] && bindkey -- "${key[End]}"       end-of-line
 [[ -n "${key[Insert]}"    ]] && bindkey -- "${key[Insert]}"    overwrite-mode
@@ -31,10 +29,8 @@ key[Shift-Tab]="${terminfo[kcbt]}"
 [[ -n "${key[Shift-Tab]}" ]] && bindkey -- "${key[Shift-Tab]}" reverse-menu-complete
 
 # Create widgets for history-substring-search
-
 zle -N history-substring-search-up; zle -N history-substring-search-down
 
 # key binding for history-substring-search
-
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
