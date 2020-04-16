@@ -1,3 +1,4 @@
+adobe-source-code-pro-fonts
 adwaita-icon-theme
 alsa-firmware
 alsa-utils
@@ -68,7 +69,6 @@ file-roller
 filelight
 filesystem
 findutils
-firefox
 flex
 foomatic-db
 foomatic-db-engine
@@ -142,7 +142,6 @@ iwd
 jdk-openjdk
 jfsutils
 joplin
-kate
 kcalc
 kcolorchooser
 kconfig
@@ -171,6 +170,7 @@ kwalletmanager
 kwave
 kwayland-integration
 kwidgetsaddons
+kwrite
 kwrited
 latte-dock-git
 less
@@ -181,6 +181,7 @@ lib32-ocl-icd
 lib32-opencl-nvidia
 lib32-vulkan-intel
 libdbusmenu-glib
+libdbusmenu-gtk3
 libgsf
 libinput-gestures
 libkscreen
@@ -194,11 +195,11 @@ libwnck3
 libzen
 licenses
 linux-atm
-linux-ck
-linux-ck-headers
+linux-clear
+linux-clear-headers
+linux-clear-lts2019
+linux-clear-lts2019-headers
 linux-firmware
-linux-lts
-linux-lts-headers
 logrotate
 lsb-release
 lsscsi
@@ -209,6 +210,7 @@ m4
 make
 man-db
 man-pages
+marktext
 mc
 mdadm
 megasync
@@ -227,6 +229,8 @@ nano-syntax-highlighting
 nbd
 ndisc6
 neofetch
+nerd-fonts-fira-code
+nerd-fonts-source-code-pro
 net-tools
 netctl
 networkmanager
@@ -302,6 +306,7 @@ qt5-svg
 refind-efi
 reflector
 reiserfsprogs
+rmtrash
 rp-pppoe
 rstudio-desktop-bin
 rsync
@@ -334,17 +339,15 @@ thermald
 tlp
 tlp-rdw
 tlpui-git
+ttf-amiri
 ttf-bitstream-vera
-ttf-carlito
-ttf-croscore
 ttf-dejavu
 ttf-droid
-ttf-google-fonts-git
 ttf-liberation
 ttf-linux-libertine
-ttf-mac-fonts
-ttf-roboto
-ttf-ubuntu-font-family
+ttf-qurancomplex-fonts
+ttf-sil-lateef
+ttf-sil-scheherazade
 ufw
 uget
 uget-integrator-chromium
@@ -360,10 +363,10 @@ util-linux
 vdpauinfo
 vi
 virtualbox
-virtualbox-guest-dkms
 virtualbox-guest-iso
 virtualbox-guest-utils
 virtualbox-host-dkms
+visual-studio-code-bin
 vlc
 vpnc
 vulkan-headers
@@ -383,7 +386,7 @@ wvdial
 x86_energy_perf_policy
 xdg-desktop-portal
 xdg-desktop-portal-kde
-xdg-user-dirs-gtk
+xdg-user-dirs
 xf86-input-libinput
 xf86-input-synaptics
 xf86-video-intel
@@ -391,6 +394,7 @@ xfsprogs
 xl2tpd
 xorg-server
 xorg-server-common
+xorg-xdpyinfo
 xorg-xinit
 yakuake
 yaml-cpp
