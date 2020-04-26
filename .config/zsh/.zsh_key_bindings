@@ -1,3 +1,6 @@
+# Create widgets for history-substring-search
+zle -N history-substring-search-up; zle -N history-substring-search-down
+
 # create a zkbd compatible hash;
 typeset -g -A key
 
@@ -20,17 +23,14 @@ key[Shift-Tab]="${terminfo[kcbt]}"
 [[ -n "${key[Insert]}"    ]] && bindkey -- "${key[Insert]}"    overwrite-mode
 [[ -n "${key[Backspace]}" ]] && bindkey -- "${key[Backspace]}" backward-delete-char
 [[ -n "${key[Delete]}"    ]] && bindkey -- "${key[Delete]}"    delete-char
-[[ -n "${key[Up]}"        ]] && bindkey -- "${key[Up]}"        up-line-or-history
-[[ -n "${key[Down]}"      ]] && bindkey -- "${key[Down]}"      down-line-or-history
+[[ -n "${key[Up]}"        ]] && bindkey -- "${key[Up]}"        history-substring-search-up
+[[ -n "${key[Down]}"      ]] && bindkey -- "${key[Down]}"      history-substring-search-down
 [[ -n "${key[Left]}"      ]] && bindkey -- "${key[Left]}"      backward-char
 [[ -n "${key[Right]}"     ]] && bindkey -- "${key[Right]}"     forward-char
 [[ -n "${key[PageUp]}"    ]] && bindkey -- "${key[PageUp]}"    beginning-of-buffer-or-history
 [[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"  end-of-buffer-or-history
 [[ -n "${key[Shift-Tab]}" ]] && bindkey -- "${key[Shift-Tab]}" reverse-menu-complete
 
-# Create widgets for history-substring-search
-zle -N history-substring-search-up; zle -N history-substring-search-down
-
-# key binding for history-substring-search
+# Other key binding for history-substring-search
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
