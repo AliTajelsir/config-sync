@@ -4,3 +4,4 @@ export LIBVA_DRIVER_NAME=iHD
 export CFLAGS="-march=native -O2 -pipe -fstack-protector-strong -fno-plt"
 export CXXFLAGS="${CFLAGS}"
 export SUDO_PROMPT=$'\a[sudo] password for %p: '
+export VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/nvidia_icd.json
