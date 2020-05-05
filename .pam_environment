@@ -1,0 +1,7 @@
+ZDOTDIR DEFAULT=@{HOME}/.config/zsh
+LIBVA_DRIVER_NAME DEFAULT=iHD
+VK_ICD_FILENAMES DEFAULT=/usr/share/vulkan/icd.d/nvidia_icd.json
+CFLAGS DEFAULT="-march=native -O2 -pipe -fstack-protector-strong -fno-plt"
+CXXFLAGS DEFAULT="${CFLAGS}"
+EDITOR DEFAULT=nano
+VISUAL DEFAULT=nano
