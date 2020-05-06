@@ -16,7 +16,7 @@ onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
-settingsComplexity=4
+settingsComplexity=1
 timerHide=700
 timerShow=200
 viewType=1
@@ -51,12 +51,28 @@ plugin=org.kde.latte.separator
 [Containments][12][Applets][107][Configuration]
 PreloadWeight=0
 
+[Containments][12][Applets][115]
+immutability=1
+plugin=org.kde.plasma.userswitcher
+
+[Containments][12][Applets][115][Configuration]
+PreloadWeight=60
+
+[Containments][12][Applets][115][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][12][Applets][115][Configuration][General]
+showFace=true
+showName=false
+showTechnicalInfo=true
+
 [Containments][12][Applets][51]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][12][Applets][51][Configuration]
-PreloadWeight=28
+PreloadWeight=38
 SystrayContainmentId=13
 
 [Containments][12][Applets][52]
@@ -138,7 +154,7 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][12][Applets][92][Configuration]
-PreloadWeight=0
+PreloadWeight=20
 
 [Containments][12][Applets][92][Configuration][ConfigDialog]
 DialogHeight=540
@@ -151,8 +167,8 @@ enabledCalendarPlugins=/usr/lib/x86_64-linux-gnu/qt5/plugins/plasmacalendarplugi
 clock_timeformat=d MMMM yyyy, h:mm AP
 
 [Containments][12][Applets][92][Configuration][Google Calendar]
-access_token=ya29.a0Ae4lvC3_64gvm7zIDlSANXAk_AfP9cy-25C3RcXRsPfY3EzN-keT4_aH5sAFjBbUareyUhdb9rA3J9yV8xmhAzcT3wSSD5Rb63AQYrQoNs6MGXJEjj1pu00g_an1HtrVljegGe0uCBFxahR09qc5eo66pSh_vWn2bkRc1Q
-access_token_expires_at=2128006433
+access_token=ya29.a0Ae4lvC2YGjkf0hxTc2W6D5Xk483mDfwOZEZ35gdnrdkBmtdLHQB6XA1k2FnNDhELZmfzzRQIwyFpXDsPjgFlnko4TRQwQA7uvw7gu23-rL9AtfntKayn8Kt4_KtVlNtH8gzYuAl6TP00oiCdIdj7jfxKLHwgIn6rG0WsuQ
+access_token_expires_at=3907344911
 access_token_type=Bearer
 calendar_id_list=alitajelsir@gmail.com,en.sd#holiday@group.v.calendar.google.com,en.islamic#holiday@group.v.calendar.google.com
 calendar_list=W3sia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJhbGl0YWplbHNpckBnbWFpbC5jb20iLCJzdW1tYXJ5IjoiYWxpdGFqZWxzaXJAZ21haWwuY29tIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJjb2xvcklkIjoiMjMiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjY2Q3NGU2IiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoib3duZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbeyJtZXRob2QiOiJlbWFpbCIsIm1pbnV0ZXMiOjMwfSx7Im1ldGhvZCI6InBvcHVwIiwibWludXRlcyI6MzB9XSwibm90aWZpY2F0aW9uU2V0dGluZ3MiOnsibm90aWZpY2F0aW9ucyI6W3sidHlwZSI6ImV2ZW50Q3JlYXRpb24iLCJtZXRob2QiOiJlbWFpbCJ9LHsidHlwZSI6ImV2ZW50Q2hhbmdlIiwibWV0aG9kIjoiZW1haWwifSx7InR5cGUiOiJldmVudENhbmNlbGxhdGlvbiIsIm1ldGhvZCI6ImVtYWlsIn0seyJ0eXBlIjoiZXZlbnRSZXNwb25zZSIsIm1ldGhvZCI6ImVtYWlsIn1dfSwicHJpbWFyeSI6dHJ1ZSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX0seyJraW5kIjoiY2FsZW5kYXIjY2FsZW5kYXJMaXN0RW50cnkiLCJldGFnIjoiXCIxNTc1ODg3Mzk1NjA4MDAwXCIiLCJpZCI6ImVuLmlzbGFtaWMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20iLCJzdW1tYXJ5IjoiTXVzbGltIEhvbGlkYXlzIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJzdW1tYXJ5T3ZlcnJpZGUiOiJNdXNsaW0gSG9saWRheXMiLCJjb2xvcklkIjoiMTciLCJiYWNrZ3JvdW5kQ29sb3IiOiIjOWE5Y2ZmIiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoicmVhZGVyIiwiZGVmYXVsdFJlbWluZGVycyI6W10sImNvbmZlcmVuY2VQcm9wZXJ0aWVzIjp7ImFsbG93ZWRDb25mZXJlbmNlU29sdXRpb25UeXBlcyI6WyJldmVudEhhbmdvdXQiXX19LHsia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJlbi5zZCNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbSIsInN1bW1hcnkiOiJIb2xpZGF5cyBpbiBTdWRhbiIsInRpbWVab25lIjoiQWZyaWNhL0toYXJ0b3VtIiwic3VtbWFyeU92ZXJyaWRlIjoiSG9saWRheXMgaW4gU3VkYW4iLCJjb2xvcklkIjoiNyIsImJhY2tncm91bmRDb2xvciI6IiM0MmQ2OTIiLCJmb3JlZ3JvdW5kQ29sb3IiOiIjMDAwMDAwIiwic2VsZWN0ZWQiOnRydWUsImFjY2Vzc1JvbGUiOiJyZWFkZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbXSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX1d
@@ -170,15 +186,18 @@ plugin=org.kde.latte.sidebarbutton
 PreloadWeight=0
 
 [Containments][12][ConfigDialog]
-DialogHeight=899
-DialogWidth=539
+DialogHeight=904
+DialogWidth=600
 
 [Containments][12][Configuration]
 PreloadWeight=0
 
 [Containments][12][General]
 advanced=false
-appletOrder=97;107;54;52;53;92;90;51;106;105
+alignment=10
+alignmentUpgraded=true
+appletOrder=97;107;54;52;53;92;90;51;115;106;105
+appletShadowsEnabled=false
 autoDecreaseIconSize=false
 disablePanelShadowForMaximized=true
 dragActiveWindowEnabled=true
@@ -194,10 +213,12 @@ screenEdgeMargin=10
 shadowOpacity=55
 shadowSize=40
 shadows=None
+shadowsUpgraded=true
 solidBackgroundForMaximized=true
 splitterPosition=5
 splitterPosition2=7
 taskScrollAction=ScrollNone
+tasksUpgraded=true
 thickMargin=10
 titleTooltips=false
 zoomLevel=0
@@ -344,32 +365,30 @@ onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
-settingsComplexity=4
+settingsComplexity=1
 timerHide=700
 timerShow=500
 viewType=0
 visibility=2
 wallpaperplugin=org.kde.image
 
-[Containments][14][Applets][112]
+[Containments][14][Applets][114]
 immutability=1
-plugin=org.kde.plasma.kicker
+plugin=org.kde.plasma.kickoff
 
-[Containments][14][Applets][112][Configuration]
-PreloadWeight=94
+[Containments][14][Applets][114][Configuration]
+PreloadWeight=100
 
-[Containments][14][Applets][112][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+[Containments][14][Applets][114][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
 
-[Containments][14][Applets][112][Configuration][General]
+[Containments][14][Applets][114][Configuration][General]
 alphaSort=true
-appNameFormat=2
-customButtonImage=start-here-kde-plasma
-favoriteSystemActions=
 favoritesPortedToKAstats=true
-showIconsRootLevel=true
-useCustomButtonImage=true
+icon=start-here-kde-plasma
+menuItems=application:t,computer:t,used:t,oftenUsed:f,bookmark:f,leave:f
+systemApplications=systemsettings.desktop,org.kde.kinfocenter.desktop
 useExtraRunners=false
 
 [Containments][14][Applets][74]
@@ -388,10 +407,13 @@ PreloadWeight=0
 
 [Containments][14][Applets][76][Configuration][General]
 isInLatteDock=true
-launchers59=applications:org.kde.dolphin.desktop,applications:chromium.desktop,applications:rstudio.desktop,applications:mendeleydesktop.desktop,applications:libreoffice-writer.desktop,applications:libreoffice-impress.desktop,applications:libreoffice-calc.desktop,applications:vlc.desktop,applications:org.kde.gwenview.desktop,applications:virtualbox.desktop,applications:net.lutris.Lutris.desktop,applications:org.gnome.DiskUtility.desktop
+launchers59=applications:chromium.desktop,applications:org.kde.dolphin.desktop,applications:rstudio.desktop,applications:mendeleydesktop.desktop,applications:libreoffice-writer.desktop,applications:libreoffice-impress.desktop,applications:libreoffice-calc.desktop,applications:vlc.desktop,applications:org.kde.gwenview.desktop,applications:virtualbox.desktop
+scrollTasksEnabled=true
+showWindowActions=true
+taskScrollAction=ScrollNone
 
 [Containments][14][ConfigDialog]
-DialogHeight=884
+DialogHeight=894
 DialogWidth=600
 
 [Containments][14][Configuration]
@@ -399,7 +421,8 @@ PreloadWeight=0
 
 [Containments][14][General]
 advanced=false
-appletOrder=112;76;74
+alignmentUpgraded=true
+appletOrder=114;76;74
 dragActiveWindowEnabled=true
 iconSize=48
 inConfigureAppletsMode=true
@@ -412,12 +435,14 @@ screenEdgeMargin=10
 scrollTasksEnabled=true
 shadowOpacity=55
 shadowSize=40
+shadowsUpgraded=true
 showGlow=false
 showWindowActions=true
 solidBackgroundForMaximized=true
 splitterPosition=1
 splitterPosition2=2
 taskScrollAction=ScrollNone
+tasksUpgraded=true
 thickMargin=10
 unifiedGlobalShortcuts=false
 zoomLevel=0
@@ -457,7 +482,7 @@ onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
-settingsComplexity=4
+settingsComplexity=1
 timerHide=700
 timerShow=0
 viewType=0
@@ -501,13 +526,14 @@ lengthMargin=10
 thickMargin=0
 
 [Containments][15][ConfigDialog]
-DialogHeight=941
-DialogWidth=509
+DialogHeight=937
+DialogWidth=600
 
 [Containments][15][Configuration]
 PreloadWeight=0
 
 [Containments][15][General]
+alignmentUpgraded=true
 animationsEnabled=false
 appletOrder=108;55;109
 iconSize=184
@@ -516,9 +542,11 @@ lastWindowsVisibilityMode=8
 maxLength=80
 panelSize=100
 panelTransparency=30
-screenEdgeMargin=28
+screenEdgeMargin=10
+shadowsUpgraded=true
 solidBackgroundForMaximized=true
 taskScrollAction=ScrollNone
+tasksUpgraded=true
 thickMargin=10
 zoomLevel=0
 
@@ -542,7 +570,7 @@ onPrimary=true
 plugin=org.kde.latte.containment
 raiseOnActivityChange=false
 raiseOnDesktopChange=false
-settingsComplexity=4
+settingsComplexity=1
 timerHide=700
 timerShow=0
 viewType=0
@@ -615,24 +643,28 @@ DialogWidth=720
 sources=disk%2Fsda_(8%3A0)%2FRate%2Fwblk,disk%2Fsdb_(8%3A16)%2FRate%2Fwblk
 
 [Containments][94][ConfigDialog]
-DialogHeight=941
-DialogWidth=509
+DialogHeight=937
+DialogWidth=600
 
 [Containments][94][Configuration]
 PreloadWeight=0
 
 [Containments][94][General]
+alignmentUpgraded=true
 appletOrder=98;103;100;104;99
+appletShadowsEnabled=false
 iconSize=184
 inConfigureAppletsMode=true
 lastWindowsVisibilityMode=8
 maxLength=80
 panelSize=100
 panelTransparency=30
-screenEdgeMargin=28
+screenEdgeMargin=10
 shadows=None
+shadowsUpgraded=true
 solidBackgroundForMaximized=true
 taskScrollAction=ScrollNone
+tasksUpgraded=true
 thickMargin=10
 zoomLevel=0
 
@@ -646,9 +678,12 @@ type=org.kde.latte.default
 [LayoutSettings]
 activities=
 background=
+backgroundStyle=0
 color=lightskyblue
+customBackground=
+customTextColor=fcfcfc
 disableBordersForMaximizedWindows=true
-lastUsedActivity=ea16d7a2-7e9a-48ff-8d4e-c38264123714
+lastUsedActivity=4687f9ee-8115-4758-af51-eeaf223eac9c
 launchers=
 preferredForShortcutsTouched=true
 sharedLayout=
