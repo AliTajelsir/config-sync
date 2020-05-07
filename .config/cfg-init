@@ -1,17 +1,20 @@
+echo 'Start syncing $HOME configurations'
 git clone --bare https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
 cfg () {
     /usr/bin/git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
 mkdir -p .config-backup
-cfg checkout
+cfg checkout 2>/dev/null
 if [ $? = 0 ]; then
-  echo "Checking out cfg...";
+  echo 'Syncing...';
   else
-    echo "Backing up pre-existing dot files and checking out cfg...";
-    cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
+    echo 'Backuping pre-existing files and syncing...';
+    dir2bak=$(cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'});
+    echo "$dir2bak" | xargs -I{} cp --parents {} ~/.config-backup;
+    echo "$dir2bak" | xargs -I{} rm {}
 fi;
 cfg checkout
 if [ $? = 0 ]; then
-  echo "Checking out cfg completed successfully"
+  echo 'Syncing completed successfully'
 fi;
 cfg config --local status.showUntrackedFiles no
