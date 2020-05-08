@@ -26,7 +26,7 @@ zstyle ':completion::complete:*' cache-path $HOME/.config/zsh/.zcompcache
 zstyle ':completion:*' ignore-parents parent pwd
 
 # History
-HISTFILE=$HOME/.config/zsh/.zsh_history
+HISTFILE=$HOME/.config/zsh/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
 
