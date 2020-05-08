@@ -10,7 +10,7 @@ if [ $? = 0 ]; then
   else
     echo 'Backuping pre-existing files and syncing...';
     dir2bak=$(cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'});
-    echo "$dir2bak" | xargs -I{} cp --parents {} ~/.config-backup;
+    echo "$dir2bak" | xargs -I{} cp --parents {} $HOME/.config-backup;
     echo "$dir2bak" | xargs -I{} rm {}
 fi;
 cfg checkout
