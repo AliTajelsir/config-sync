@@ -1,1 +1,1 @@
-export SUDO_PROMPT=$'\a[sudo] password for %p: '
+export PATH="${PATH}:$HOME/.local/bin"
