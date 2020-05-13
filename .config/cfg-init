@@ -3,15 +3,13 @@ git clone --bare --single-branch --branch termux https://github.com/AliTajelsir/
 cfg () {
     /usr/bin/git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
-mkdir -p .config-backup
+mkdir -p $HOME/.config-backup
 cfg checkout 2>/dev/null
 if [ $? = 0 ]; then
   echo 'Syncing...';
   else
     echo 'Backuping pre-existing files and syncing...';
-    dir2bak=$(cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'});
-    echo "$dir2bak" | xargs -I{} cp --parents {} $HOME/.config-backup;
-    echo "$dir2bak" | xargs -I{} rm {}
+    cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -i'{}' rsync -avR --remove-source-files '{}' $HOME/.config-backup
 fi;
 cfg checkout
 if [ $? = 0 ]; then
