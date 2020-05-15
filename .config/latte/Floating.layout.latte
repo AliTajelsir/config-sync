@@ -56,7 +56,7 @@ immutability=1
 plugin=org.kde.plasma.userswitcher
 
 [Containments][12][Applets][115][Configuration]
-PreloadWeight=51
+PreloadWeight=0
 
 [Containments][12][Applets][115][Configuration][ConfigDialog]
 DialogHeight=600
@@ -67,12 +67,41 @@ showFace=true
 showName=false
 showTechnicalInfo=true
 
+[Containments][12][Applets][120]
+immutability=1
+plugin=org.kde.plasma.kickoff
+
+[Containments][12][Applets][120][Configuration]
+PreloadWeight=92
+
+[Containments][12][Applets][120][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][12][Applets][120][Configuration][General]
+alphaSort=true
+favoritesPortedToKAstats=true
+menuItems=application:t,computer:t,used:t,oftenUsed:f,bookmark:f,leave:f
+systemApplications=systemsettings.desktop,org.kde.kinfocenter.desktop
+useExtraRunners=false
+
+[Containments][12][Applets][121]
+immutability=1
+plugin=org.kde.latte.separator
+
+[Containments][12][Applets][121][Configuration]
+PreloadWeight=0
+
+[Containments][12][Applets][123]
+immutability=1
+plugin=org.kde.latte.separator
+
 [Containments][12][Applets][51]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][12][Applets][51][Configuration]
-PreloadWeight=39
+PreloadWeight=92
 SystrayContainmentId=13
 
 [Containments][12][Applets][52]
@@ -167,8 +196,8 @@ enabledCalendarPlugins=/usr/lib/x86_64-linux-gnu/qt5/plugins/plasmacalendarplugi
 clock_timeformat=d MMMM yyyy, h:mm AP
 
 [Containments][12][Applets][92][Configuration][Google Calendar]
-access_token=ya29.a0Ae4lvC2YGjkf0hxTc2W6D5Xk483mDfwOZEZ35gdnrdkBmtdLHQB6XA1k2FnNDhELZmfzzRQIwyFpXDsPjgFlnko4TRQwQA7uvw7gu23-rL9AtfntKayn8Kt4_KtVlNtH8gzYuAl6TP00oiCdIdj7jfxKLHwgIn6rG0WsuQ
-access_token_expires_at=3907344911
+access_token=ya29.a0AfH6SMAQ4FcdAo0GsGMJ4xoigkcxW3JBdPFxKCzBIo6LYh0lg3l0gZG3TRII4vAqe1hWpMwvWGAVHRAKJlKkEz6dmAaeyQC0Oemlmvdl7Fy5moGV-UAsKtryYiQx82eoCyyw5Ovjat272kqZXRdco9EdwZuNRoIJqeiq_g
+access_token_expires_at=356574389
 access_token_type=Bearer
 calendar_id_list=alitajelsir@gmail.com,en.sd#holiday@group.v.calendar.google.com,en.islamic#holiday@group.v.calendar.google.com
 calendar_list=W3sia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJhbGl0YWplbHNpckBnbWFpbC5jb20iLCJzdW1tYXJ5IjoiYWxpdGFqZWxzaXJAZ21haWwuY29tIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJjb2xvcklkIjoiMjMiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjY2Q3NGU2IiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoib3duZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbeyJtZXRob2QiOiJlbWFpbCIsIm1pbnV0ZXMiOjMwfSx7Im1ldGhvZCI6InBvcHVwIiwibWludXRlcyI6MzB9XSwibm90aWZpY2F0aW9uU2V0dGluZ3MiOnsibm90aWZpY2F0aW9ucyI6W3sidHlwZSI6ImV2ZW50Q3JlYXRpb24iLCJtZXRob2QiOiJlbWFpbCJ9LHsidHlwZSI6ImV2ZW50Q2hhbmdlIiwibWV0aG9kIjoiZW1haWwifSx7InR5cGUiOiJldmVudENhbmNlbGxhdGlvbiIsIm1ldGhvZCI6ImVtYWlsIn0seyJ0eXBlIjoiZXZlbnRSZXNwb25zZSIsIm1ldGhvZCI6ImVtYWlsIn1dfSwicHJpbWFyeSI6dHJ1ZSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX0seyJraW5kIjoiY2FsZW5kYXIjY2FsZW5kYXJMaXN0RW50cnkiLCJldGFnIjoiXCIxNTc1ODg3Mzk1NjA4MDAwXCIiLCJpZCI6ImVuLmlzbGFtaWMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20iLCJzdW1tYXJ5IjoiTXVzbGltIEhvbGlkYXlzIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJzdW1tYXJ5T3ZlcnJpZGUiOiJNdXNsaW0gSG9saWRheXMiLCJjb2xvcklkIjoiMTciLCJiYWNrZ3JvdW5kQ29sb3IiOiIjOWE5Y2ZmIiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoicmVhZGVyIiwiZGVmYXVsdFJlbWluZGVycyI6W10sImNvbmZlcmVuY2VQcm9wZXJ0aWVzIjp7ImFsbG93ZWRDb25mZXJlbmNlU29sdXRpb25UeXBlcyI6WyJldmVudEhhbmdvdXQiXX19LHsia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJlbi5zZCNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbSIsInN1bW1hcnkiOiJIb2xpZGF5cyBpbiBTdWRhbiIsInRpbWVab25lIjoiQWZyaWNhL0toYXJ0b3VtIiwic3VtbWFyeU92ZXJyaWRlIjoiSG9saWRheXMgaW4gU3VkYW4iLCJjb2xvcklkIjoiNyIsImJhY2tncm91bmRDb2xvciI6IiM0MmQ2OTIiLCJmb3JlZ3JvdW5kQ29sb3IiOiIjMDAwMDAwIiwic2VsZWN0ZWQiOnRydWUsImFjY2Vzc1JvbGUiOiJyZWFkZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbXSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX1d
@@ -186,8 +215,8 @@ plugin=org.kde.latte.sidebarbutton
 PreloadWeight=0
 
 [Containments][12][ConfigDialog]
-DialogHeight=904
-DialogWidth=600
+DialogHeight=894
+DialogWidth=570
 
 [Containments][12][Configuration]
 PreloadWeight=0
@@ -196,7 +225,7 @@ PreloadWeight=0
 advanced=false
 alignment=10
 alignmentUpgraded=true
-appletOrder=97;107;54;52;53;92;90;51;115;106;105
+appletOrder=97;107;120;121;54;52;53;92;90;51;123;115;106;105
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
 disablePanelShadowForMaximized=true
@@ -215,8 +244,8 @@ shadowSize=40
 shadows=None
 shadowsUpgraded=true
 solidBackgroundForMaximized=true
-splitterPosition=5
-splitterPosition2=7
+splitterPosition=7
+splitterPosition2=9
 taskScrollAction=ScrollNone
 tasksUpgraded=true
 thickMargin=10
@@ -244,19 +273,19 @@ location=3
 plugin=org.kde.plasma.private.systemtray
 wallpaperplugin=org.kde.image
 
-[Containments][13][Applets][116]
+[Containments][13][Applets][122]
 immutability=1
 plugin=org.kde.plasma.battery
 
-[Containments][13][Applets][116][Configuration]
-PreloadWeight=42
+[Containments][13][Applets][122][Configuration]
+PreloadWeight=46
 
 [Containments][13][Applets][41]
 immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][13][Applets][41][Configuration]
-PreloadWeight=2
+PreloadWeight=45
 
 [Containments][13][Applets][42]
 immutability=1
@@ -375,25 +404,6 @@ viewType=0
 visibility=2
 wallpaperplugin=org.kde.image
 
-[Containments][14][Applets][114]
-immutability=1
-plugin=org.kde.plasma.kickoff
-
-[Containments][14][Applets][114][Configuration]
-PreloadWeight=97
-
-[Containments][14][Applets][114][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][14][Applets][114][Configuration][General]
-alphaSort=true
-favoritesPortedToKAstats=true
-icon=start-here-kde-plasma
-menuItems=application:t,computer:t,used:t,oftenUsed:f,bookmark:f,leave:f
-systemApplications=systemsettings.desktop,org.kde.kinfocenter.desktop
-useExtraRunners=false
-
 [Containments][14][Applets][74]
 immutability=1
 plugin=org.kde.plasma.trash
@@ -410,14 +420,14 @@ PreloadWeight=0
 
 [Containments][14][Applets][76][Configuration][General]
 isInLatteDock=true
-launchers59=applications:org.kde.konsole.desktop,applications:org.kde.dolphin.desktop,applications:chromium.desktop,applications:org.gnome.Geary.desktop,applications:rstudio.desktop,applications:mendeleydesktop.desktop,applications:libreoffice-writer.desktop,applications:libreoffice-impress.desktop,applications:libreoffice-calc.desktop,applications:vlc.desktop,applications:org.kde.gwenview.desktop,applications:virtualbox.desktop
+launchers59=applications:org.kde.konsole.desktop,applications:rstudio.desktop,applications:org.kde.dolphin.desktop,applications:chromium.desktop,applications:org.gnome.Geary.desktop,applications:mendeleydesktop.desktop,applications:libreoffice-writer.desktop,applications:libreoffice-impress.desktop,applications:libreoffice-calc.desktop,applications:vlc.desktop,applications:org.kde.gwenview.desktop,applications:virtualbox.desktop
 scrollTasksEnabled=true
 showWindowActions=true
 taskScrollAction=ScrollNone
 
 [Containments][14][ConfigDialog]
-DialogHeight=894
-DialogWidth=600
+DialogHeight=896
+DialogWidth=570
 
 [Containments][14][Configuration]
 PreloadWeight=0
@@ -425,7 +435,7 @@ PreloadWeight=0
 [Containments][14][General]
 advanced=false
 alignmentUpgraded=true
-appletOrder=114;76;74
+appletOrder=76;74
 dragActiveWindowEnabled=true
 iconSize=48
 inConfigureAppletsMode=true
