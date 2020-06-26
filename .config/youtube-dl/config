@@ -1,2 +1,3 @@
---external-downloader aria2c
 --netrc
+--external-downloader aria2c
+--output $HOME/Videos/YouTube/%(title)s.%(ext)s
