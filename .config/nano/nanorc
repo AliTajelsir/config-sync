@@ -1,3 +1,11 @@
 include "/usr/share/nano/*.nanorc"
 include "/usr/share/nano-syntax-highlighting/*.nanorc"
+include "~/.config/nano/pkgbuild.nanorc"
 set tabsize "4"
+set autoindent
+set brackets "’)>]}"
+set matchbrackets "(<[{)>]}"
+set smooth
+set multibuffer
+set softwrap
+set linenumbers
