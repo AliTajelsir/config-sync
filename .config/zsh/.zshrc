@@ -48,14 +48,14 @@ fi
 alias -g '$= '
 alias coursera-dl='coursera-dl -ca "$(cat ~/.config/coursera-ca)" --video-resolution 1080p'
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
-alias ddimg='sudo dd bs=4M status=progress oflag=sync'
+alias ddimg='dd bs=4M status=progress oflag=sync'
 alias trash=rmtrash
 alias awiki=wiki-search-html
 alias locate='sudo updatedb && locate'
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rsync='rsync -ahP'
+alias rsync='rsync -ah --progress'
 
 # Command not found handler
 source /usr/share/doc/pkgfile/command-not-found.zsh
