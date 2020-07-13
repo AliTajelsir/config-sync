@@ -1,5 +1,5 @@
 echo 'Start syncing $HOME configurations'
-git clone --bare --single-branch --branch master https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
+git clone --bare --single-branch --branch master https://gitlab.com/AliTajelsir/config-sync.git $HOME/.config-sync
 cfg () {
     /usr/bin/git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
