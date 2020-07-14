@@ -13,6 +13,7 @@ UseCustomCursorColor=false
 DimWhenInactive=false
 Name=Ventum
 Parent=FALLBACK/
+TerminalCenter=false
 
 [Interaction Options]
 OpenLinksByDirectClickEnabled=true
