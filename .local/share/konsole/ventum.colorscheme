@@ -59,16 +59,16 @@ Color=155,89,182
 Color=97,74,115
 
 [Color5Intense]
-Color=142,68,173
+Color=239,0,239
 
 [Color6]
-Color=26,188,156
+Color=0,204,204
 
 [Color6Faint]
-Color=24,108,96
+Color=0,101,101
 
 [Color6Intense]
-Color=22,160,133
+Color=0,230,230
 
 [Color7]
 Color=252,252,252
