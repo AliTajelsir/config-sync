@@ -54,11 +54,11 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][12][Applets][135][Configuration]
-PreloadWeight=99
+PreloadWeight=87
 
 [Containments][12][Applets][135][Configuration][ConfigDialog]
-DialogHeight=1013
-DialogWidth=960
+DialogHeight=600
+DialogWidth=800
 
 [Containments][12][Applets][135][Configuration][General]
 alignResultsToBottom=false
@@ -66,53 +66,75 @@ alphaSort=true
 appNameFormat=2
 favoriteSystemActions=
 favoritesPortedToKAstats=true
+limitDepth=true
 showIconsRootLevel=true
-
-[Containments][12][Applets][150]
-immutability=1
-plugin=org.kde.latte.sidebarbutton
-
-[Containments][12][Applets][150][Configuration]
-PreloadWeight=2
-
-[Containments][12][Applets][150][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][12][Applets][150][Configuration][General]
-screenEdge=6
 
 [Containments][12][Applets][151]
 immutability=1
 plugin=org.kde.latte.separator
 
 [Containments][12][Applets][151][Configuration]
-PreloadWeight=2
+PreloadWeight=0
 
-[Containments][12][Applets][156]
+[Containments][12][Applets][152]
 immutability=1
-plugin=org.kde.latte.separator
+plugin=org.kde.plasma.systemmonitor
 
-[Containments][12][Applets][156][Configuration]
-PreloadWeight=26
+[Containments][12][Applets][152][Configuration]
+PreloadWeight=76
 
-[Containments][12][Applets][157]
-immutability=1
-plugin=org.kde.latte.sidebarbutton
+[Containments][12][Applets][152][Configuration][Appearance]
+chartFace=org.kde.ksysguard.barchart
+title=CPU Usage
 
-[Containments][12][Applets][157][Configuration]
-PreloadWeight=26
-
-[Containments][12][Applets][157][Configuration][ConfigDialog]
+[Containments][12][Applets][152][Configuration][ConfigDialog]
 DialogHeight=600
 DialogWidth=800
+
+[Containments][12][Applets][152][Configuration][SensorColors]
+cpu/cpu0/TotalLoad=61,174,233
+cpu/cpu1/TotalLoad=77,61,233
+cpu/cpu2/TotalLoad=206,61,233
+cpu/cpu3/TotalLoad=233,61,131
+cpu/cpu4/TotalLoad=233,120,61
+cpu/cpu5/TotalLoad=217,233,61
+cpu/cpu6/TotalLoad=88,233,61
+cpu/cpu7/TotalLoad=61,233,163
+cpu/system/TotalLoad=0,255,255
+
+[Containments][12][Applets][152][Configuration][Sensors]
+highPrioritySensorIds=["cpu/system/TotalLoad","cpu/cpu0/TotalLoad","cpu/cpu1/TotalLoad","cpu/cpu2/TotalLoad","cpu/cpu3/TotalLoad","cpu/cpu4/TotalLoad","cpu/cpu5/TotalLoad","cpu/cpu6/TotalLoad","cpu/cpu7/TotalLoad"]
+totalSensors=["cpu/system/TotalLoad"]
+
+[Containments][12][Applets][154]
+immutability=1
+plugin=org.kde.plasma.systemmonitor
+
+[Containments][12][Applets][154][Configuration]
+PreloadWeight=46
+
+[Containments][12][Applets][154][Configuration][Appearance]
+chartFace=org.kde.ksysguard.barchart
+title=Memory Usage
+
+[Containments][12][Applets][154][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][12][Applets][154][Configuration][SensorColors]
+mem/physical/allocated=61,174,233
+
+[Containments][12][Applets][154][Configuration][Sensors]
+highPrioritySensorIds=["mem/physical/allocated"]
+lowPrioritySensorIds=["mem/swap/used"]
+totalSensors=["mem/physical/allocatedlevel"]
 
 [Containments][12][Applets][51]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][12][Applets][51][Configuration]
-PreloadWeight=0
+PreloadWeight=21
 SystrayContainmentId=13
 
 [Containments][12][Applets][52]
@@ -197,14 +219,14 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][12][Applets][92][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][12][Applets][92][Configuration][Calendar]
 firstDayOfWeek=0
 
 [Containments][12][Applets][92][Configuration][ConfigDialog]
-DialogHeight=947
-DialogWidth=960
+DialogHeight=1013
+DialogWidth=800
 
 [Containments][12][Applets][92][Configuration][Events]
 enabledCalendarPlugins=/usr/lib/x86_64-linux-gnu/qt5/plugins/plasmacalendarplugins/holidaysevents.so
@@ -212,10 +234,11 @@ eventStartingSfxPath=file:///usr/share/sounds/Oxygen-Im-Nudge.ogg
 
 [Containments][12][Applets][92][Configuration][General]
 clock_timeformat=dd MMM yyyy, hh:mm AP
+widget_show_timer=false
 
 [Containments][12][Applets][92][Configuration][Google Calendar]
-access_token=ya29.a0AfH6SMBUJ7lOX0QvllgQbkGGgLWeyJ6iK1Whojsq4tcSC9HGxMOEdfbYrv_3RjTpkiQ2bW_klwl6O6oM20A_fs379IeaJkc5Te1nZs-mhUBi-pQs4jnAoRJI18yRpwpM8uZNeB5xHgvno0QPPFFj-I4X5hRdKYmBdkgbNw
-access_token_expires_at=876349268
+access_token=ya29.a0AfH6SMCGXGcfEUws_jvOSoWbHinsgBwYYx5FhLMxbQ-LrhCJbu2q-R29-CX8shEALHzx_sWmScrUP5U_joxeKcFTWwQk7zbgfqTt0TgQxqZxFVhx4rIaEctnp9r5GFLkLxK58Dd2Qpeuj3YBAaBx2HkiYfL-tiumyf96SA
+access_token_expires_at=1870846540
 access_token_type=Bearer
 calendar_id_list=alitajelsir@gmail.com,en.sd#holiday@group.v.calendar.google.com,en.islamic#holiday@group.v.calendar.google.com
 calendar_list=W3sia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJhbGl0YWplbHNpckBnbWFpbC5jb20iLCJzdW1tYXJ5IjoiYWxpdGFqZWxzaXJAZ21haWwuY29tIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJjb2xvcklkIjoiMjMiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjY2Q3NGU2IiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoib3duZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbeyJtZXRob2QiOiJlbWFpbCIsIm1pbnV0ZXMiOjMwfSx7Im1ldGhvZCI6InBvcHVwIiwibWludXRlcyI6MzB9XSwibm90aWZpY2F0aW9uU2V0dGluZ3MiOnsibm90aWZpY2F0aW9ucyI6W3sidHlwZSI6ImV2ZW50Q3JlYXRpb24iLCJtZXRob2QiOiJlbWFpbCJ9LHsidHlwZSI6ImV2ZW50Q2hhbmdlIiwibWV0aG9kIjoiZW1haWwifSx7InR5cGUiOiJldmVudENhbmNlbGxhdGlvbiIsIm1ldGhvZCI6ImVtYWlsIn0seyJ0eXBlIjoiZXZlbnRSZXNwb25zZSIsIm1ldGhvZCI6ImVtYWlsIn1dfSwicHJpbWFyeSI6dHJ1ZSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX0seyJraW5kIjoiY2FsZW5kYXIjY2FsZW5kYXJMaXN0RW50cnkiLCJldGFnIjoiXCIxNTc1ODg3Mzk1NjA4MDAwXCIiLCJpZCI6ImVuLmlzbGFtaWMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20iLCJzdW1tYXJ5IjoiTXVzbGltIEhvbGlkYXlzIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJzdW1tYXJ5T3ZlcnJpZGUiOiJNdXNsaW0gSG9saWRheXMiLCJjb2xvcklkIjoiMTciLCJiYWNrZ3JvdW5kQ29sb3IiOiIjOWE5Y2ZmIiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoicmVhZGVyIiwiZGVmYXVsdFJlbWluZGVycyI6W10sImNvbmZlcmVuY2VQcm9wZXJ0aWVzIjp7ImFsbG93ZWRDb25mZXJlbmNlU29sdXRpb25UeXBlcyI6WyJldmVudEhhbmdvdXQiXX19LHsia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJlbi5zZCNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbSIsInN1bW1hcnkiOiJIb2xpZGF5cyBpbiBTdWRhbiIsInRpbWVab25lIjoiQWZyaWNhL0toYXJ0b3VtIiwic3VtbWFyeU92ZXJyaWRlIjoiSG9saWRheXMgaW4gU3VkYW4iLCJjb2xvcklkIjoiNyIsImJhY2tncm91bmRDb2xvciI6IiM0MmQ2OTIiLCJmb3JlZ3JvdW5kQ29sb3IiOiIjMDAwMDAwIiwic2VsZWN0ZWQiOnRydWUsImFjY2Vzc1JvbGUiOiJyZWFkZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbXSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX1d
@@ -236,7 +259,7 @@ PreloadWeight=0
 advanced=false
 alignment=10
 alignmentUpgraded=true
-appletOrder=157;156;131;135;132;54;52;53;92;90;51;151;150
+appletOrder=131;135;132;54;52;53;92;90;51;151;154;152
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
 disablePanelShadowForMaximized=true
@@ -256,12 +279,11 @@ shadowSize=40
 shadows=None
 shadowsUpgraded=true
 solidBackgroundForMaximized=true
-splitterPosition=8
-splitterPosition2=10
+splitterPosition=6
+splitterPosition2=8
 taskScrollAction=ScrollNone
 tasksUpgraded=true
 thickMargin=10
-titleTooltips=false
 zoomLevel=0
 
 [Containments][12][Indicator]
@@ -272,6 +294,7 @@ padding=0.07999999821186066
 type=org.kde.latte.default
 
 [Containments][12][Indicator][org.kde.latte.default][General]
+lengthPadding=0.05
 reversed=true
 
 [Containments][13]
@@ -297,7 +320,7 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][13][Applets][41][Configuration]
-PreloadWeight=0
+PreloadWeight=5
 
 [Containments][13][Applets][42]
 immutability=1
@@ -321,10 +344,11 @@ plugin=org.kde.plasma.volume
 PreloadWeight=0
 
 [Containments][13][Applets][44][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=600
+DialogWidth=800
 
 [Containments][13][Applets][44][Configuration][General]
+globalMute=true
 maximumVolume=125
 raiseMaximumVolume=true
 
@@ -358,7 +382,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][13][Applets][48][Configuration]
-PreloadWeight=0
+PreloadWeight=2
 
 [Containments][13][Applets][49]
 immutability=1
@@ -386,8 +410,8 @@ plugin=org.kde.plasma.nightcolorcontrol
 PreloadWeight=0
 
 [Containments][13][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=600
+DialogWidth=800
 
 [Containments][13][General]
 extraItems=org.kde.ktp-contactlist,org.kde.plasma.clipboard,org.kde.plasma.printmanager,org.kde.kdeconnect,org.kde.plasma.pkupdates,org.kde.plasma.notifications,org.kde.plasma.devicenotifier,org.kde.plasma.volume,org.kde.discovernotifier,org.kde.plasma.keyboardindicator,org.kde.kscreen,org.kde.plasma.networkmanagement,org.kde.plasma.battery,org.kde.plasma.bluetooth,org.kde.plasma.nightcolorcontrol,gammy,MEGAsync,Koi
@@ -473,7 +497,7 @@ PreloadWeight=0
 [Containments][14][Applets][76][Configuration][General]
 isInLatteDock=true
 isPreferredForPositionShortcuts=true
-launchers59=applications:org.kde.konsole.desktop,applications:rstudio.desktop,applications:firefox.desktop,applications:org.kde.dolphin.desktop,applications:mendeleydesktop.desktop,applications:libreoffice-writer.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-impress.desktop,applications:vlc.desktop,applications:com.obsproject.Studio.desktop,applications:org.kde.kdenlive.desktop,applications:org.kde.kwave.desktop,applications:uget-gtk.desktop,applications:org.qbittorrent.qBittorrent.desktop,applications:virtualbox.desktop,applications:modem-manager-gui.desktop,applications:org.kde.partitionmanager.desktop,file:///usr/bin/pamac-manager?iconData=iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAKl0lEQVRoge2Ze4xcd3XHP7_7mufuzuxjFnfWmzgb2wkYQmRvbMfEdE1iZLsB5IKVAk2IdyNUFwoJf1BVraJKVao2tFKL3AKBCEQQtnikEFKwWhKJRCEJm0ZJ7JL4vaz34d2ZndnZed3n6R8zs6rZx4wf_EXO6OjOvfd3z-_7_f3OOb_zuxfelrfl91vUtTAiIvrYxMxtaDJEIJtR3ASsQRGvNaAITCK8haZekYBnrk_3vqyUCq6276sicHpiYq2O9ueIfBJIX2bHF0TxhCfB4fV9fReuFMMVETg1NdWj-_J3wKcAC2Cy_L-8lvsvTs__D7OVMXL2DI5fYSTxVQwVIWzFiFhttMUTxNvaCYVCDXOOwOOekr_ZmE5nfucEzoxPflwhXwY6PXF4Zupxnp8-ymTpzLLtR5KH0QILDQstMFBioolJNBajuydFIplEKQWQVcJn1vWnj_xOCIyOjpqJnjX_phQjAC9kjvCDs_9AwckCENIjbExu5eb227mu7RZS4RuIGZ1o6Hi-i-tUKVeKFIsLFAtFAq_WdSgUIt3XT1t7ewPSV3Mzk5_dsmWLe80ITExMRCu-fB_YU_Hn-cpbD_DruZcASIZ6-UD6Pnb23kdYj7c0GCJCLpdhdnoG27Zrdjo7Sa_tR9M0EP4zYqiPpdPp8lUTGB0dNROp3h8h7Jmxz_GlNw6Qt2fRlcGdfffykb6_RNesloAvRySbmWV6coog8AlHItwwcCOGaQLy39WFwr5NmzY5V0Xg1Nj4Y8DIdOU0_3h8PyWnQMSM88CGL_OuxNAVAf9tqZTLnD97Ftd1CIVCDKzfgGGaKOQrN17X_2dXTODU-fFPCPJE2cvz8Ku7WHBzJELdPPjOI_RGBq4J-IZ4nsv5s2eplMtEolEG1m9AKYUI92xc13_0sgn8-sKFLt0L3kTo_vvjf8TYwglCRoS_2vRjeiM3rgjkG87K9wD2F18m2dm57D3f8zhz-iR21SbZ1UXf2n6AOXH0jRs3Lp9itZU60lz_ERHp_vn0Y4wtnEBTGvcNfIlUZABZ5ef7rKr5Qp5MNrPss5qhs_b6dShNMZfNUCjkEaQT0_3bFXEud_HUqQt9CJ_yApsfjf0zANtSH-bW5B4QVlU_WF0VGqViiWwmiwSy5PlwKExPqheAqYnJWhvUyJkzZ_pbJuBr7mcEsX7wm0dwgiohPco91z-y6sg3foG_ujactlIpk81mCCRYYqM7lcIwTWy7yvx8DkEsRzOWDeYlBEREE9QnROClmScB2N6zHx0LEZpqMxdCVC04gaptM5edw_eDS2yAItX7DkQgO5upXQvkT0VEb0rgzdNjWxHpeyv_HBW_iEJjX_rB5sjr2syFtPoMKEBTCsd2yOdyBL5_iZ1EIomua5RLJVzbBpH0yXPnNjclEBAMCcLzmVrm6gqniejtLblPK0EsCpQCpSlEQGm1FJrP5_B8b9EOCmJtMQShsFCouafIrlZcaIsInF94HYCB2GCrg48IBMHqqqgxkLorgUJQeL5PobCA5_mLtqLxOAEB5VKpblstmQHjty8oxQYQFtxa2t3QsZ1aimhNfH_1-6o-ZFp9JlAKpQRNaSABxeIC8XgcXdcJh0KIcrCdCtTmZWNTAiKsAfColSD90ffUA-vaEBCl0OojX3MAQaGhlIaIAoFyqbYam1YIwcW2Sw0Ma1ogEMRBIfUnEmZq8X8rEgSrt1WLeUTVFi-lGiVDfXYEEaFSqRAKWfjKR6RaxyBtTQn4foCuL8lWy8qLC4_xTP6fWmrbkK_777_kfNAaYdAaQWkKpUBTGkrTUEphOw4BNlo9VH1_6RZ6SRB7nlcWkcYuiZw9jYgsq1vjI7y__QtNU-dKutkcZos5vLi4NQK8IUHg4ooDuo-I4HleqSkBx_MzApiqVuOPlV9btXrY3j7CH7Z_gcDnsnTQHGbQGlmMZqUUStPqOVaBgqpbAuWhdI1ABNf3lhR0Swj4rjOOCDGjC4CThV82zZ07OoYZSjzUdA1o6KA1zG2h4QZONEU9sGvntcSqqHjz-JqLZYWQIMCtOuNNCZQr9jkRuC56CwBniqMt5f8dHSPsSj7U1G1uCw-zNTy8uAYopVBoCI3MVIOllEahchHBJRruQCmNctU515yA7bzguC7buj4KwJwzScnPt7QKvy85zAc6V56JreGDbIscRGn1FVmjloEa2JXUXUnhiUuuOo4oj0S8F9uxqdr2c00JJCy-NZ-fz66PbyOkRwHhqYlHW16KdyYPclf35wkCuUS3R-_n9ujBxVpIU6Dx_92mdl6bEbi48BYeNhGrg7AZYz5fyPZ1t3-3KYGhoSGvWC29EoiwOXE3AK_kf4KL02wrsKg7O0fY3f3g4shvjx3k9thwrf6pj7BSGrIYsPWyoh7EgXj8pjhKoDxS7evxA6FcqYwu96pl2f2A7hsPZ7Nz3t3pL6IrEz9w-Pb5h1ZMp8vpzq5hdnUfYkd8mB3xg4vZsTbCl-5kVe0GjcPZ_IvYwQKmEaE7vo5MJuOZevDXy2FdlsCH9g69mJ8vvKFcnbtShwA4Mf8so9n_aG0K6npXzyHuSh2quQa1UW_8p37U6tcVtRIjX5lmrPQyPi7rOrYReAHFYunVfbt3j7ZMAMCImvdcmJqq7EqN0BWq7ea-N_EwE5UTLZfWgmCFLELhMNRXWhSLQasaObQe0BVvgVfmjuBSocdaTyp-Axcmp6qRROyTK-FckcD-O-886bnBNzOZOT478B1MFSLA5_CZ-5i1z1_WTFiWhWVaq458xV3g-YuPUfJniWqdvDu1l9nZLBLI1_bdccfJlXA2fbF15MmnT_Skut5Zsqb419N_QiAuujL5eP-jbGpbsr9YVVzXxff9WgFXr3c0TZGtjPNC5hs4FGnTU-xMHcKrasxmsm_c85F971nN5oozsNjATW6ZnpqZitl_wOcGjmKqEL64fHvs83z93AO1NaLFzY5hmBiGWS87FZ5UeXnme_x09hEWZIaI3s0ddfAXL85Ma05pazN8Lb3c_eGxY6lysfpGV7IzFUko_v3svcw6Y3UDOu_t-CB3r_kiUS3RijmqXpnX537G8dJTeKqCoSxuMHfwvnfcTz5XJDeXv5iMGe_eu3fv7DUhAHDs2LFYtuiMmqZxUzq9hl_kHufns1_Dl1pqVkrRrveyLraZgdgga6O3kDR60ZVJycmTqY4zWX6T8errTPvHQQUYyiSp97EjeT_90VsZn5gk8P0TulcZPHDgQKUVXJf9gePoj396uFwqf7o31a13JNt4evpRXi38BDto-iYcU5kYmoWpLNaYN3Fr_MO8q_NOcvkCszMZPx6PHv7Y3Xs-dzl4rugT09NPP7chb88_6Tr2zZ2dnSqZ6GDCeY2X5r_PWOV1Sm4WDwcRQcPAVBHaVQ9d-nWsi23m5o47aDfWkM_PM5fLSciyTpjx0P6P7t596nKxXNVHvief-tlttuv_S7laHjRNU4_F40TDYUIhC9Mw0fT6Tirw8VyPqu1QrVQolkq4rutHw-FfmYbxF3_8oT2_ulIM1-Qz67PPPmvkSs69rusecPxgk--5XZ7nh4IgUACapomu67ZlGhnDtI4rg6M90fATQ0ND3rXo_215W36f5f8ADmu0mbELE-EAAAAASUVORK5CYII%3D,applications:systemsettings.desktop
+launchers59=applications:org.kde.konsole.desktop,applications:rstudio.desktop,applications:firefox.desktop,applications:org.kde.dolphin.desktop,applications:mendeleydesktop.desktop,applications:libreoffice-writer.desktop,applications:libreoffice-calc.desktop,applications:libreoffice-impress.desktop,applications:vlc.desktop,applications:com.obsproject.Studio.desktop,applications:org.kde.kdenlive.desktop,applications:org.kde.kwave.desktop,applications:uget-gtk.desktop,applications:org.qbittorrent.qBittorrent.desktop,applications:systemsettings.desktop,applications:virtualbox.desktop,applications:modem-manager-gui.desktop,applications:org.kde.partitionmanager.desktop,file:///usr/bin/pamac-manager?iconData=iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAKl0lEQVRoge2Ze4xcd3XHP7_7mufuzuxjFnfWmzgb2wkYQmRvbMfEdE1iZLsB5IKVAk2IdyNUFwoJf1BVraJKVao2tFKL3AKBCEQQtnikEFKwWhKJRCEJm0ZJ7JL4vaz34d2ZndnZed3n6R8zs6rZx4wf_EXO6OjOvfd3z-_7_f3OOb_zuxfelrfl91vUtTAiIvrYxMxtaDJEIJtR3ASsQRGvNaAITCK8haZekYBnrk_3vqyUCq6276sicHpiYq2O9ueIfBJIX2bHF0TxhCfB4fV9fReuFMMVETg1NdWj-_J3wKcAC2Cy_L-8lvsvTs__D7OVMXL2DI5fYSTxVQwVIWzFiFhttMUTxNvaCYVCDXOOwOOekr_ZmE5nfucEzoxPflwhXwY6PXF4Zupxnp8-ymTpzLLtR5KH0QILDQstMFBioolJNBajuydFIplEKQWQVcJn1vWnj_xOCIyOjpqJnjX_phQjAC9kjvCDs_9AwckCENIjbExu5eb227mu7RZS4RuIGZ1o6Hi-i-tUKVeKFIsLFAtFAq_WdSgUIt3XT1t7ewPSV3Mzk5_dsmWLe80ITExMRCu-fB_YU_Hn-cpbD_DruZcASIZ6-UD6Pnb23kdYj7c0GCJCLpdhdnoG27Zrdjo7Sa_tR9M0EP4zYqiPpdPp8lUTGB0dNROp3h8h7Jmxz_GlNw6Qt2fRlcGdfffykb6_RNesloAvRySbmWV6coog8AlHItwwcCOGaQLy39WFwr5NmzY5V0Xg1Nj4Y8DIdOU0_3h8PyWnQMSM88CGL_OuxNAVAf9tqZTLnD97Ftd1CIVCDKzfgGGaKOQrN17X_2dXTODU-fFPCPJE2cvz8Ku7WHBzJELdPPjOI_RGBq4J-IZ4nsv5s2eplMtEolEG1m9AKYUI92xc13_0sgn8-sKFLt0L3kTo_vvjf8TYwglCRoS_2vRjeiM3rgjkG87K9wD2F18m2dm57D3f8zhz-iR21SbZ1UXf2n6AOXH0jRs3Lp9itZU60lz_ERHp_vn0Y4wtnEBTGvcNfIlUZABZ5ef7rKr5Qp5MNrPss5qhs_b6dShNMZfNUCjkEaQT0_3bFXEud_HUqQt9CJ_yApsfjf0zANtSH-bW5B4QVlU_WF0VGqViiWwmiwSy5PlwKExPqheAqYnJWhvUyJkzZ_pbJuBr7mcEsX7wm0dwgiohPco91z-y6sg3foG_ujactlIpk81mCCRYYqM7lcIwTWy7yvx8DkEsRzOWDeYlBEREE9QnROClmScB2N6zHx0LEZpqMxdCVC04gaptM5edw_eDS2yAItX7DkQgO5upXQvkT0VEb0rgzdNjWxHpeyv_HBW_iEJjX_rB5sjr2syFtPoMKEBTCsd2yOdyBL5_iZ1EIomua5RLJVzbBpH0yXPnNjclEBAMCcLzmVrm6gqniejtLblPK0EsCpQCpSlEQGm1FJrP5_B8b9EOCmJtMQShsFCouafIrlZcaIsInF94HYCB2GCrg48IBMHqqqgxkLorgUJQeL5PobCA5_mLtqLxOAEB5VKpblstmQHjty8oxQYQFtxa2t3QsZ1aimhNfH_1-6o-ZFp9JlAKpQRNaSABxeIC8XgcXdcJh0KIcrCdCtTmZWNTAiKsAfColSD90ffUA-vaEBCl0OojX3MAQaGhlIaIAoFyqbYam1YIwcW2Sw0Ma1ogEMRBIfUnEmZq8X8rEgSrt1WLeUTVFi-lGiVDfXYEEaFSqRAKWfjKR6RaxyBtTQn4foCuL8lWy8qLC4_xTP6fWmrbkK_777_kfNAaYdAaQWkKpUBTGkrTUEphOw4BNlo9VH1_6RZ6SRB7nlcWkcYuiZw9jYgsq1vjI7y__QtNU-dKutkcZos5vLi4NQK8IUHg4ooDuo-I4HleqSkBx_MzApiqVuOPlV9btXrY3j7CH7Z_gcDnsnTQHGbQGlmMZqUUStPqOVaBgqpbAuWhdI1ABNf3lhR0Swj4rjOOCDGjC4CThV82zZ07OoYZSjzUdA1o6KA1zG2h4QZONEU9sGvntcSqqHjz-JqLZYWQIMCtOuNNCZQr9jkRuC56CwBniqMt5f8dHSPsSj7U1G1uCw-zNTy8uAYopVBoCI3MVIOllEahchHBJRruQCmNctU515yA7bzguC7buj4KwJwzScnPt7QKvy85zAc6V56JreGDbIscRGn1FVmjloEa2JXUXUnhiUuuOo4oj0S8F9uxqdr2c00JJCy-NZ-fz66PbyOkRwHhqYlHW16KdyYPclf35wkCuUS3R-_n9ujBxVpIU6Dx_92mdl6bEbi48BYeNhGrg7AZYz5fyPZ1t3-3KYGhoSGvWC29EoiwOXE3AK_kf4KL02wrsKg7O0fY3f3g4shvjx3k9thwrf6pj7BSGrIYsPWyoh7EgXj8pjhKoDxS7evxA6FcqYwu96pl2f2A7hsPZ7Nz3t3pL6IrEz9w-Pb5h1ZMp8vpzq5hdnUfYkd8mB3xg4vZsTbCl-5kVe0GjcPZ_IvYwQKmEaE7vo5MJuOZevDXy2FdlsCH9g69mJ8vvKFcnbtShwA4Mf8so9n_aG0K6npXzyHuSh2quQa1UW_8p37U6tcVtRIjX5lmrPQyPi7rOrYReAHFYunVfbt3j7ZMAMCImvdcmJqq7EqN0BWq7ea-N_EwE5UTLZfWgmCFLELhMNRXWhSLQasaObQe0BVvgVfmjuBSocdaTyp-Axcmp6qRROyTK-FckcD-O-886bnBNzOZOT478B1MFSLA5_CZ-5i1z1_WTFiWhWVaq458xV3g-YuPUfJniWqdvDu1l9nZLBLI1_bdccfJlXA2fbF15MmnT_Skut5Zsqb419N_QiAuujL5eP-jbGpbsr9YVVzXxff9WgFXr3c0TZGtjPNC5hs4FGnTU-xMHcKrasxmsm_c85F971nN5oozsNjATW6ZnpqZitl_wOcGjmKqEL64fHvs83z93AO1NaLFzY5hmBiGWS87FZ5UeXnme_x09hEWZIaI3s0ddfAXL85Ma05pazN8Lb3c_eGxY6lysfpGV7IzFUko_v3svcw6Y3UDOu_t-CB3r_kiUS3RijmqXpnX537G8dJTeKqCoSxuMHfwvnfcTz5XJDeXv5iMGe_eu3fv7DUhAHDs2LFYtuiMmqZxUzq9hl_kHufns1_Dl1pqVkrRrveyLraZgdgga6O3kDR60ZVJycmTqY4zWX6T8errTPvHQQUYyiSp97EjeT_90VsZn5gk8P0TulcZPHDgQKUVXJf9gePoj396uFwqf7o31a13JNt4evpRXi38BDto-iYcU5kYmoWpLNaYN3Fr_MO8q_NOcvkCszMZPx6PHv7Y3Xs-dzl4rugT09NPP7chb88_6Tr2zZ2dnSqZ6GDCeY2X5r_PWOV1Sm4WDwcRQcPAVBHaVQ9d-nWsi23m5o47aDfWkM_PM5fLSciyTpjx0P6P7t596nKxXNVHvief-tlttuv_S7laHjRNU4_F40TDYUIhC9Mw0fT6Tirw8VyPqu1QrVQolkq4rutHw-FfmYbxF3_8oT2_ulIM1-Qz67PPPmvkSs69rusecPxgk--5XZ7nh4IgUACapomu67ZlGhnDtI4rg6M90fATQ0ND3rXo_215W36f5f8ADmu0mbELE-EAAAAASUVORK5CYII%3D
 previewWindowAsPopup=true
 scrollTasksEnabled=true
 showWindowActions=true
@@ -498,6 +522,7 @@ dragActiveWindowEnabled=true
 fittsLawIsRequested=false
 iconSize=48
 inConfigureAppletsMode=true
+lastWindowsVisibilityMode=6
 lengthExtMargin=5
 maxLength=96
 panelSize=100
@@ -516,9 +541,8 @@ splitterPosition2=2
 taskScrollAction=ScrollNone
 tasksUpgraded=true
 thickMargin=10
-titleTooltips=false
 unifiedGlobalShortcuts=false
-zoomLevel=0
+zoomLevel=4
 
 [Containments][14][Indicator]
 customType=org.kde.latte.dashtopanel
@@ -541,258 +565,6 @@ reversed=true
 [Containments][14][Indicator][org.kde.latte.plasma][General]
 clickedAnimationEnabled=true
 lengthPadding=0.1
-
-[Containments][145]
-activityId=
-byPassWM=false
-enableKWinEdges=true
-formfactor=3
-immutability=1
-isPreferredForShortcuts=false
-lastScreen=-1
-location=6
-onPrimary=true
-plugin=org.kde.latte.containment
-raiseOnActivityChange=false
-raiseOnDesktopChange=false
-settingsComplexity=1
-timerHide=700
-timerShow=0
-viewType=0
-visibility=8
-wallpaperplugin=org.kde.image
-
-[Containments][145][Applets][147]
-immutability=1
-plugin=org.kde.plasma.systemmonitor
-
-[Containments][145][Applets][147][Configuration]
-PreloadWeight=24
-
-[Containments][145][Applets][147][Configuration][Appearance]
-chartFace=org.kde.ksysguard.barchart
-title=CPU Usage
-
-[Containments][145][Applets][147][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][145][Applets][147][Configuration][SensorColors]
-cpu/cpu0/TotalLoad=77,61,233
-cpu/cpu1/TotalLoad=206,61,233
-cpu/cpu2/TotalLoad=233,61,131
-cpu/cpu3/TotalLoad=233,120,61
-cpu/cpu4/TotalLoad=217,233,61
-cpu/cpu5/TotalLoad=88,233,61
-cpu/cpu6/TotalLoad=61,233,163
-cpu/cpu7/TotalLoad=61,202,233
-cpu/system/TotalLoad=61,174,233
-
-[Containments][145][Applets][147][Configuration][Sensors]
-highPrioritySensorIds=["cpu/system/TotalLoad","cpu/cpu0/TotalLoad","cpu/cpu1/TotalLoad","cpu/cpu2/TotalLoad","cpu/cpu3/TotalLoad","cpu/cpu4/TotalLoad","cpu/cpu5/TotalLoad","cpu/cpu6/TotalLoad","cpu/cpu7/TotalLoad"]
-totalSensors=["cpu/system/TotalLoad"]
-
-[Containments][145][Applets][148]
-immutability=1
-plugin=org.kde.latte.separator
-
-[Containments][145][Applets][148][Configuration]
-PreloadWeight=0
-
-[Containments][145][Applets][148][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][145][Applets][149]
-immutability=1
-plugin=org.kde.plasma.systemmonitor
-
-[Containments][145][Applets][149][Configuration]
-PreloadWeight=29
-
-[Containments][145][Applets][149][Configuration][Appearance]
-chartFace=org.kde.ksysguard.barchart
-title=Memory Usage
-
-[Containments][145][Applets][149][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][145][Applets][149][Configuration][SensorColors]
-mem/physical/allocated=61,174,233
-
-[Containments][145][Applets][149][Configuration][Sensors]
-highPrioritySensorIds=["mem/physical/allocated"]
-lowPrioritySensorIds=["mem/physical/application","mem/physical/buf","mem/physical/cached","mem/swap/used"]
-totalSensors=["mem/physical/allocatedlevel"]
-
-[Containments][145][ConfigDialog]
-DialogHeight=937
-DialogWidth=570
-
-[Containments][145][Configuration]
-PreloadWeight=0
-
-[Containments][145][General]
-alignmentUpgraded=true
-appletOrder=147;148;149
-appletShadowsEnabled=false
-iconSize=184
-inConfigureAppletsMode=true
-lastWindowsVisibilityMode=8
-maxLength=96
-panelSize=100
-panelTransparency=20
-plasmaBackgroundForPopups=true
-screenEdgeMargin=10
-shadowOpacity=25
-shadowSize=15
-shadowsUpgraded=true
-solidBackgroundForMaximized=true
-splitterPosition=0
-splitterPosition2=1
-tasksUpgraded=true
-thickMargin=10
-zoomLevel=0
-
-[Containments][145][Indicator]
-customType=
-enabled=false
-type=org.kde.latte.default
-
-[Containments][17]
-activityId=
-byPassWM=false
-enableKWinEdges=true
-formfactor=3
-immutability=1
-isPreferredForShortcuts=false
-lastScreen=10
-location=5
-onPrimary=true
-plugin=org.kde.latte.containment
-raiseOnActivityChange=false
-raiseOnDesktopChange=false
-settingsComplexity=1
-timerHide=700
-timerShow=0
-viewType=0
-visibility=8
-wallpaperplugin=org.kde.image
-
-[Containments][17][Applets][152]
-immutability=1
-plugin=org.kde.plasma.systemmonitor
-
-[Containments][17][Applets][152][Configuration]
-PreloadWeight=31
-
-[Containments][17][Applets][152][Configuration][Appearance]
-chartFace=org.kde.ksysguard.linechart
-title=Hard Disk Activity
-
-[Containments][17][Applets][152][Configuration][SensorColors]
-disk/all/read=233,120,61
-disk/all/write=61,174,233
-
-[Containments][17][Applets][152][Configuration][Sensors]
-highPrioritySensorIds=["disk/all/write","disk/all/read"]
-
-[Containments][17][Applets][153]
-immutability=1
-plugin=org.kde.plasma.systemmonitor
-
-[Containments][17][Applets][153][Configuration]
-PreloadWeight=56
-
-[Containments][17][Applets][153][Configuration][Appearance]
-chartFace=org.kde.ksysguard.barchart
-title=Disk Usage
-
-[Containments][17][Applets][153][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][17][Applets][153][Configuration][SensorColors]
-partitions//filllevel=61,174,233
-partitions/all/filllevel=206,61,233
-partitions/boot/filllevel=233,120,61
-partitions/home/filllevel=88,233,61
-
-[Containments][17][Applets][153][Configuration][Sensors]
-highPrioritySensorIds=["partitions//filllevel","partitions/all/filllevel","partitions/boot/filllevel","partitions/home/filllevel"]
-lowPrioritySensorIds=["partitions/all/total"]
-totalSensors=["partitions/all/filllevel"]
-
-[Containments][17][Applets][154]
-immutability=1
-plugin=org.kde.plasma.systemmonitor
-
-[Containments][17][Applets][154][Configuration]
-PreloadWeight=31
-
-[Containments][17][Applets][154][Configuration][Appearance]
-chartFace=org.kde.ksysguard.linechart
-title=Network speed
-
-[Containments][17][Applets][154][Configuration][SensorColors]
-network/all/receivedDataRate=61,174,233
-network/all/sentDataRate=233,120,61
-
-[Containments][17][Applets][154][Configuration][Sensors]
-highPrioritySensorIds=["network/all/receivedDataRate","network/all/sentDataRate"]
-
-[Containments][17][Applets][155]
-immutability=1
-plugin=org.kde.latte.separator
-
-[Containments][17][Applets][155][Configuration]
-PreloadWeight=26
-
-[Containments][17][Applets][67]
-immutability=1
-plugin=org.kde.latte.separator
-
-[Containments][17][Applets][67][Configuration]
-PreloadWeight=0
-
-[Containments][17][Applets][67][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][17][ConfigDialog]
-DialogHeight=928
-DialogWidth=570
-
-[Containments][17][Configuration]
-PreloadWeight=0
-
-[Containments][17][General]
-alignmentUpgraded=true
-appletOrder=154;155;153;67;152
-appletShadowsEnabled=false
-iconSize=184
-inConfigureAppletsMode=true
-lastWindowsVisibilityMode=8
-maxLength=96
-panelSize=100
-panelTransparency=20
-plasmaBackgroundForPopups=true
-screenEdgeMargin=10
-shadowOpacity=25
-shadowSize=15
-shadowsUpgraded=true
-solidBackgroundForMaximized=true
-splitterPosition=0
-splitterPosition2=1
-tasksUpgraded=true
-thickMargin=10
-zoomLevel=0
-
-[Containments][17][Indicator]
-customType=
-enabled=false
-type=org.kde.latte.default
 
 [LayoutSettings]
 activities=
