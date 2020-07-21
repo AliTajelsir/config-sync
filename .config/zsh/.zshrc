@@ -46,6 +46,7 @@ fi
 
 # Aliases
 alias -g '$= '
+alias sudo='sudo -v; sudo $'
 alias coursera-dl='coursera-dl -ca "$(cat ~/.config/coursera-ca)" --video-resolution 1080p'
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
