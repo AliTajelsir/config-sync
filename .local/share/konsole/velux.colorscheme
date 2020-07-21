@@ -62,13 +62,13 @@ Color=180,139,216
 Color=132,63,166
 
 [Color6]
-Color=21,162,134
+Color=0,182,182
 
 [Color6Faint]
-Color=40,188,166
+Color=89,204,200
 
 [Color6Intense]
-Color=17,135,109
+Color=0,127,127
 
 [Color7]
 Color=35,38,39
@@ -91,6 +91,6 @@ Color=28,26,36
 [General]
 Blur=false
 ColorRandomization=false
-Description=Breeze Light
+Description=Velux
 Opacity=1
 Wallpaper=
