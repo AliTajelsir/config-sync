@@ -23,21 +23,6 @@ viewType=1
 visibility=0
 wallpaperplugin=org.kde.image
 
-[Containments][12][Applets][131]
-immutability=1
-plugin=org.kde.latte.spacer
-
-[Containments][12][Applets][131][Configuration]
-PreloadWeight=0
-
-[Containments][12][Applets][131][Configuration][ConfigDialog]
-DialogHeight=600
-DialogWidth=800
-
-[Containments][12][Applets][131][Configuration][General]
-containmentType=Latte
-lengthPixels=2
-
 [Containments][12][Applets][132]
 immutability=1
 plugin=org.kde.latte.separator
@@ -54,7 +39,7 @@ immutability=1
 plugin=org.kde.plasma.kicker
 
 [Containments][12][Applets][135][Configuration]
-PreloadWeight=87
+PreloadWeight=92
 
 [Containments][12][Applets][135][Configuration][ConfigDialog]
 DialogHeight=600
@@ -81,7 +66,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][12][Applets][152][Configuration]
-PreloadWeight=76
+PreloadWeight=44
 
 [Containments][12][Applets][152][Configuration][Appearance]
 chartFace=org.kde.ksysguard.barchart
@@ -111,7 +96,7 @@ immutability=1
 plugin=org.kde.plasma.systemmonitor
 
 [Containments][12][Applets][154][Configuration]
-PreloadWeight=46
+PreloadWeight=44
 
 [Containments][12][Applets][154][Configuration][Appearance]
 chartFace=org.kde.ksysguard.barchart
@@ -129,12 +114,19 @@ highPrioritySensorIds=["mem/physical/allocated"]
 lowPrioritySensorIds=["mem/swap/used"]
 totalSensors=["mem/physical/allocatedlevel"]
 
+[Containments][12][Applets][155]
+immutability=1
+plugin=org.kde.latte.separator
+
+[Containments][12][Applets][155][Configuration]
+PreloadWeight=18
+
 [Containments][12][Applets][51]
 immutability=1
 plugin=org.kde.plasma.systemtray
 
 [Containments][12][Applets][51][Configuration]
-PreloadWeight=21
+PreloadWeight=92
 SystrayContainmentId=13
 
 [Containments][12][Applets][52]
@@ -167,8 +159,8 @@ plugin=org.kde.windowappmenu
 PreloadWeight=0
 
 [Containments][12][Applets][53][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=600
+DialogWidth=800
 
 [Containments][12][Applets][53][Configuration][General]
 containmentType=Latte
@@ -187,12 +179,12 @@ plugin=org.kde.windowbuttons
 PreloadWeight=0
 
 [Containments][12][Applets][54][Configuration][ConfigDialog]
-DialogHeight=540
-DialogWidth=720
+DialogHeight=600
+DialogWidth=800
 
 [Containments][12][Applets][54][Configuration][General]
 buttonSizePercentage=80
-buttons=5|3|4|10|2|9
+buttons=3|4|5|10|9|2
 containmentType=Latte
 lengthFirstMargin=4
 lengthMarginsLock=false
@@ -219,7 +211,7 @@ immutability=1
 plugin=org.kde.plasma.eventcalendar
 
 [Containments][12][Applets][92][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][12][Applets][92][Configuration][Calendar]
 firstDayOfWeek=0
@@ -237,8 +229,8 @@ clock_timeformat=dd MMM yyyy, hh:mm AP
 widget_show_timer=false
 
 [Containments][12][Applets][92][Configuration][Google Calendar]
-access_token=ya29.a0AfH6SMCGXGcfEUws_jvOSoWbHinsgBwYYx5FhLMxbQ-LrhCJbu2q-R29-CX8shEALHzx_sWmScrUP5U_joxeKcFTWwQk7zbgfqTt0TgQxqZxFVhx4rIaEctnp9r5GFLkLxK58Dd2Qpeuj3YBAaBx2HkiYfL-tiumyf96SA
-access_token_expires_at=1870846540
+access_token=ya29.a0AfH6SMBg83_eivjsvZdsXdt1aMw_p0jDFGZb5UoiN0jayF8JjWY3Rv-xWC3skjKmdkAYOxPrD9NH0_4Jncd3xTjJszkdAhAH1dk_ArQ1-ISIIne4azf02PnV6E5UEkUADWBM9biFmX81spvPjPvHO3uzqcLpCtqac822ng
+access_token_expires_at=2031121486
 access_token_type=Bearer
 calendar_id_list=alitajelsir@gmail.com,en.sd#holiday@group.v.calendar.google.com,en.islamic#holiday@group.v.calendar.google.com
 calendar_list=W3sia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJhbGl0YWplbHNpckBnbWFpbC5jb20iLCJzdW1tYXJ5IjoiYWxpdGFqZWxzaXJAZ21haWwuY29tIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJjb2xvcklkIjoiMjMiLCJiYWNrZ3JvdW5kQ29sb3IiOiIjY2Q3NGU2IiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoib3duZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbeyJtZXRob2QiOiJlbWFpbCIsIm1pbnV0ZXMiOjMwfSx7Im1ldGhvZCI6InBvcHVwIiwibWludXRlcyI6MzB9XSwibm90aWZpY2F0aW9uU2V0dGluZ3MiOnsibm90aWZpY2F0aW9ucyI6W3sidHlwZSI6ImV2ZW50Q3JlYXRpb24iLCJtZXRob2QiOiJlbWFpbCJ9LHsidHlwZSI6ImV2ZW50Q2hhbmdlIiwibWV0aG9kIjoiZW1haWwifSx7InR5cGUiOiJldmVudENhbmNlbGxhdGlvbiIsIm1ldGhvZCI6ImVtYWlsIn0seyJ0eXBlIjoiZXZlbnRSZXNwb25zZSIsIm1ldGhvZCI6ImVtYWlsIn1dfSwicHJpbWFyeSI6dHJ1ZSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX0seyJraW5kIjoiY2FsZW5kYXIjY2FsZW5kYXJMaXN0RW50cnkiLCJldGFnIjoiXCIxNTc1ODg3Mzk1NjA4MDAwXCIiLCJpZCI6ImVuLmlzbGFtaWMjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20iLCJzdW1tYXJ5IjoiTXVzbGltIEhvbGlkYXlzIiwidGltZVpvbmUiOiJBZnJpY2EvS2hhcnRvdW0iLCJzdW1tYXJ5T3ZlcnJpZGUiOiJNdXNsaW0gSG9saWRheXMiLCJjb2xvcklkIjoiMTciLCJiYWNrZ3JvdW5kQ29sb3IiOiIjOWE5Y2ZmIiwiZm9yZWdyb3VuZENvbG9yIjoiIzAwMDAwMCIsInNlbGVjdGVkIjp0cnVlLCJhY2Nlc3NSb2xlIjoicmVhZGVyIiwiZGVmYXVsdFJlbWluZGVycyI6W10sImNvbmZlcmVuY2VQcm9wZXJ0aWVzIjp7ImFsbG93ZWRDb25mZXJlbmNlU29sdXRpb25UeXBlcyI6WyJldmVudEhhbmdvdXQiXX19LHsia2luZCI6ImNhbGVuZGFyI2NhbGVuZGFyTGlzdEVudHJ5IiwiZXRhZyI6IlwiMTUzMTY3MjcwOTg1NTAwMFwiIiwiaWQiOiJlbi5zZCNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbSIsInN1bW1hcnkiOiJIb2xpZGF5cyBpbiBTdWRhbiIsInRpbWVab25lIjoiQWZyaWNhL0toYXJ0b3VtIiwic3VtbWFyeU92ZXJyaWRlIjoiSG9saWRheXMgaW4gU3VkYW4iLCJjb2xvcklkIjoiNyIsImJhY2tncm91bmRDb2xvciI6IiM0MmQ2OTIiLCJmb3JlZ3JvdW5kQ29sb3IiOiIjMDAwMDAwIiwic2VsZWN0ZWQiOnRydWUsImFjY2Vzc1JvbGUiOiJyZWFkZXIiLCJkZWZhdWx0UmVtaW5kZXJzIjpbXSwiY29uZmVyZW5jZVByb3BlcnRpZXMiOnsiYWxsb3dlZENvbmZlcmVuY2VTb2x1dGlvblR5cGVzIjpbImV2ZW50SGFuZ291dCJdfX1d
@@ -259,10 +251,10 @@ PreloadWeight=0
 advanced=false
 alignment=10
 alignmentUpgraded=true
-appletOrder=131;135;132;54;52;53;92;90;51;151;154;152
+appletOrder=135;132;52;53;92;155;154;152;151;90;51;54
 appletShadowsEnabled=false
 autoDecreaseIconSize=false
-disablePanelShadowForMaximized=true
+autoSizeEnabled=false
 dragActiveWindowEnabled=true
 fittsLawIsRequested=false
 hideScreenGapForMaximized=true
@@ -279,11 +271,12 @@ shadowSize=40
 shadows=None
 shadowsUpgraded=true
 solidBackgroundForMaximized=true
-splitterPosition=6
-splitterPosition2=8
+splitterPosition=4
+splitterPosition2=6
 taskScrollAction=ScrollNone
 tasksUpgraded=true
 thickMargin=10
+titleTooltips=false
 zoomLevel=0
 
 [Containments][12][Indicator]
@@ -320,14 +313,21 @@ immutability=1
 plugin=org.kde.plasma.networkmanagement
 
 [Containments][13][Applets][41][Configuration]
-PreloadWeight=5
+PreloadWeight=0
 
 [Containments][13][Applets][42]
 immutability=1
 plugin=org.kde.plasma.devicenotifier
 
 [Containments][13][Applets][42][Configuration]
-PreloadWeight=0
+PreloadWeight=42
+
+[Containments][13][Applets][42][Configuration][ConfigDialog]
+DialogHeight=600
+DialogWidth=800
+
+[Containments][13][Applets][42][Configuration][General]
+popupOnNewDevice=false
 
 [Containments][13][Applets][43]
 immutability=1
@@ -382,7 +382,7 @@ immutability=1
 plugin=org.kde.plasma.clipboard
 
 [Containments][13][Applets][48][Configuration]
-PreloadWeight=2
+PreloadWeight=75
 
 [Containments][13][Applets][49]
 immutability=1
