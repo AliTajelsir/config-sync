@@ -1,3 +1,8 @@
+# Enable Powerlevel10k instant prompt.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Key binding
 zle -N history-substring-search-up; zle -N history-substring-search-down
 
@@ -15,19 +20,23 @@ key[Right]="${terminfo[kcuf1]}"
 key[PageUp]="${terminfo[kpp]}"
 key[PageDown]="${terminfo[knp]}"
 key[Shift-Tab]="${terminfo[kcbt]}"
+key[Control-Left]="${terminfo[kLFT5]}"
+key[Control-Right]="${terminfo[kRIT5]}"
 
-[[ -n "${key[Home]}"      ]] && bindkey -- "${key[Home]}"      beginning-of-line
-[[ -n "${key[End]}"       ]] && bindkey -- "${key[End]}"       end-of-line
-[[ -n "${key[Insert]}"    ]] && bindkey -- "${key[Insert]}"    overwrite-mode
-[[ -n "${key[Backspace]}" ]] && bindkey -- "${key[Backspace]}" backward-delete-char
-[[ -n "${key[Delete]}"    ]] && bindkey -- "${key[Delete]}"    delete-char
-[[ -n "${key[Up]}"        ]] && bindkey -- "${key[Up]}"        history-substring-search-up
-[[ -n "${key[Down]}"      ]] && bindkey -- "${key[Down]}"      history-substring-search-down
-[[ -n "${key[Left]}"      ]] && bindkey -- "${key[Left]}"      backward-char
-[[ -n "${key[Right]}"     ]] && bindkey -- "${key[Right]}"     forward-char
-[[ -n "${key[PageUp]}"    ]] && bindkey -- "${key[PageUp]}"    beginning-of-buffer-or-history
-[[ -n "${key[PageDown]}"  ]] && bindkey -- "${key[PageDown]}"  end-of-buffer-or-history
-[[ -n "${key[Shift-Tab]}" ]] && bindkey -- "${key[Shift-Tab]}" reverse-menu-complete
+[[ -n "${key[Home]}"		]] && bindkey -- "${key[Home]}"		 beginning-of-line
+[[ -n "${key[End]}"		]] && bindkey -- "${key[End]}"		 end-of-line
+[[ -n "${key[Insert]}"		]] && bindkey -- "${key[Insert]}"	 overwrite-mode
+[[ -n "${key[Backspace]}"	]] && bindkey -- "${key[Backspace]}"	 backward-delete-char
+[[ -n "${key[Delete]}"		]] && bindkey -- "${key[Delete]}"	 delete-char
+[[ -n "${key[Up]}"		]] && bindkey -- "${key[Up]}"		 history-substring-search-up
+[[ -n "${key[Down]}"		]] && bindkey -- "${key[Down]}"		 history-substring-search-down
+[[ -n "${key[Left]}"		]] && bindkey -- "${key[Left]}"		 backward-char
+[[ -n "${key[Right]}"		]] && bindkey -- "${key[Right]}"	 forward-char
+[[ -n "${key[PageUp]}"		]] && bindkey -- "${key[PageUp]}"	 beginning-of-buffer-or-history
+[[ -n "${key[PageDown]}"	]] && bindkey -- "${key[PageDown]}"	 end-of-buffer-or-history
+[[ -n "${key[Shift-Tab]}"	]] && bindkey -- "${key[Shift-Tab]}"	 reverse-menu-complete
+[[ -n "${key[Control-Left]}"	]] && bindkey -- "${key[Control-Left]}"	 backward-word
+[[ -n "${key[Control-Right]}"	]] && bindkey -- "${key[Control-Right]}" forward-word
 
 bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
@@ -46,7 +55,7 @@ fi
 
 # Aliases
 alias -g '$= '
-alias sudo='sudo -v; sudo $'
+alias sudo='sudo $'
 alias coursera-dl='coursera-dl -ca "$(cat ~/.config/coursera-ca)" --video-resolution 1080p'
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
@@ -56,7 +65,7 @@ alias locate='sudo updatedb && locate'
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rsync='rsync -ah --progress'
+alias rsync='rsync -ahv --progress'
 
 # Command not found handler
 source /usr/share/doc/pkgfile/command-not-found.zsh
@@ -124,5 +133,8 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 
-# Starship prompt
-eval "$(starship init zsh)"
+# Powerlevel10k theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
