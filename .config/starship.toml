@@ -1,5 +1,0 @@
-[cmd_duration]
-prefix = "⌛"
-
-[directory]
-truncate_to_repo = false
