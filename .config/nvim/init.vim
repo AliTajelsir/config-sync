@@ -1,6 +1,5 @@
 " Use mouse and system clipboard
 set mouse=a
-set clipboard=unnamedplus
 
 " Custom color and width for number coulumn
 set number
@@ -12,14 +11,14 @@ autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
 
 " Cusom shortcuts for buffer
-nnoremap <A-/> :buffers<CR>:buffer<space>
-nnoremap <A-.> :bnext<CR>
-nnoremap <A-,> :bprevious<CR>
+noremap <A-/> :buffers<CR>:buffer<space>
+noremap <A-.> :bnext<CR>
+noremap <A-,> :bprevious<CR>
 
 " Use usual terminal shortcuts for copy and paste
-vnoremap <C-S-c> "+y
-vnoremap <C-S-v> "+p
-vnoremap <C-S-x> "+d
+vnoremap <C-c> "+y
+vnoremap <C-d> "+d
+inoremap <C-v> <ESC>"+pa
 
 " Use usual system shortcuts for save as
 map <C-s> :w<space>
