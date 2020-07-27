@@ -3,6 +3,9 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# Change terminal cursor to I-Beam
+echo -e '\e[6 q'
+
 # Key binding
 zle -N history-substring-search-up; zle -N history-substring-search-down
 
@@ -54,7 +57,6 @@ if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
 fi
 
 # Aliases
-alias coursera-dl='coursera-dl -ca "$(cat ~/.config/coursera-ca)" --video-resolution 1080p'
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
 alias trash=rmtrash
