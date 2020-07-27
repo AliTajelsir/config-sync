@@ -1,3 +1,0 @@
-alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
-alias ddimg='dd bs=4M status=progress oflag=sync'
-alias trash=rmtrash
