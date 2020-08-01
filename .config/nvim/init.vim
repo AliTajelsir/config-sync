@@ -10,17 +10,17 @@ highlight LineNr ctermbg=252 ctermfg=000
 autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
 
-" Cusom shortcuts for buffer
+" Custom shortcuts for buffers
 noremap <A-/> :buffers<CR>:buffer<space>
 noremap <A-.> :bnext<CR>
 noremap <A-,> :bprevious<CR>
 
-" Use usual terminal shortcuts for copy and paste
+" Use system shortcuts for copy and paste
 vnoremap <C-c> "+y
 vnoremap <C-d> "+d
 inoremap <C-v> <ESC>"+pa
 
-" Use usual system shortcuts for save as
+" Use system shortcut for save as
 map <C-s> :w<space>
 
 " Restore terminal vertical bar when exiting neovim
