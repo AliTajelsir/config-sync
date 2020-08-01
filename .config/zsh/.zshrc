@@ -56,7 +56,10 @@ fi
 # Aliases
 alias -g '$= '
 alias sudo='sudo $'
-alias coursera-dl='coursera-dl -ca "$(cat ~/.config/coursera-ca)" --video-resolution 1080p'
+alias vi=nvim
+alias ydl=youtube-dl
+alias cdl='coursera-dl -ca "$(cat ~/.config/coursera-ca)"'
+alias edl=edx-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
 alias trash=rmtrash
@@ -74,8 +77,6 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 autoload -Uz compinit
 compinit
 
-setopt GLOBDOTS
-
 zstyle ':completion:*' menu select
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion::complete:*' use-cache 1
@@ -87,21 +88,32 @@ HISTFILE=$HOME/.config/zsh/.zhistory
 HISTSIZE=1000
 SAVEHIST=1000
 
-unsetopt EXTENDED_HISTORY
+# Options
+setopt AUTO_CD
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
+setopt AUTO_LIST
+setopt AUTO_MENU
+setopt COMPLETE_IN_WORD
+setopt GLOB_COMPLETE
+
+setopt GLOB_DOTS
 
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
-
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
-
 setopt HIST_IGNORE_SPACE
 setopt HIST_NO_STORE
 setopt HIST_NO_FUNCTIONS
+unsetopt EXTENDED_HISTORY
+
+setopt CORRECT
 
 # Help command
 autoload -Uz run-help
