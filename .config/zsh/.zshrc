@@ -3,56 +3,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Key binding
-zle -N history-substring-search-up; zle -N history-substring-search-down
-
-typeset -g -A key
-
-key[Home]="${terminfo[khome]}"
-key[End]="${terminfo[kend]}"
-key[Insert]="${terminfo[kich1]}"
-key[Backspace]="${terminfo[kbs]}"
-key[Delete]="${terminfo[kdch1]}"
-key[Up]="${terminfo[kcuu1]}"
-key[Down]="${terminfo[kcud1]}"
-key[Left]="${terminfo[kcub1]}"
-key[Right]="${terminfo[kcuf1]}"
-key[PageUp]="${terminfo[kpp]}"
-key[PageDown]="${terminfo[knp]}"
-key[Shift-Tab]="${terminfo[kcbt]}"
-key[Control-Left]="${terminfo[kLFT5]}"
-key[Control-Right]="${terminfo[kRIT5]}"
-
-[[ -n "${key[Home]}"		]] && bindkey -- "${key[Home]}"		 beginning-of-line
-[[ -n "${key[End]}"		]] && bindkey -- "${key[End]}"		 end-of-line
-[[ -n "${key[Insert]}"		]] && bindkey -- "${key[Insert]}"	 overwrite-mode
-[[ -n "${key[Backspace]}"	]] && bindkey -- "${key[Backspace]}"	 backward-delete-char
-[[ -n "${key[Delete]}"		]] && bindkey -- "${key[Delete]}"	 delete-char
-[[ -n "${key[Up]}"		]] && bindkey -- "${key[Up]}"		 history-substring-search-up
-[[ -n "${key[Down]}"		]] && bindkey -- "${key[Down]}"		 history-substring-search-down
-[[ -n "${key[Left]}"		]] && bindkey -- "${key[Left]}"		 backward-char
-[[ -n "${key[Right]}"		]] && bindkey -- "${key[Right]}"	 forward-char
-[[ -n "${key[PageUp]}"		]] && bindkey -- "${key[PageUp]}"	 beginning-of-buffer-or-history
-[[ -n "${key[PageDown]}"	]] && bindkey -- "${key[PageDown]}"	 end-of-buffer-or-history
-[[ -n "${key[Shift-Tab]}"	]] && bindkey -- "${key[Shift-Tab]}"	 reverse-menu-complete
-[[ -n "${key[Control-Left]}"	]] && bindkey -- "${key[Control-Left]}"	 backward-word
-[[ -n "${key[Control-Right]}"	]] && bindkey -- "${key[Control-Right]}" forward-word
-
-bindkey '^P' history-substring-search-up
-bindkey '^N' history-substring-search-down
-
-if (( ${+terminfo[smkx]} && ${+terminfo[rmkx]} )); then
-	autoload -Uz add-zle-hook-widget
-	function zle_application_mode_start {
-		echoti smkx
-	}
-	function zle_application_mode_stop {
-		echoti rmkx
-	}
-	add-zle-hook-widget -Uz zle-line-init zle_application_mode_start
-	add-zle-hook-widget -Uz zle-line-finish zle_application_mode_stop
-fi
-
 # Aliases
 alias -g '$= '
 alias sudo='sudo $'
@@ -78,10 +28,11 @@ autoload -Uz compinit
 compinit
 
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
+zstyle ':completion:*' ignore-parents parent pwd
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion::complete:*' use-cache 1
 zstyle ':completion::complete:*' cache-path $HOME/.config/zsh/.zcompcache
-zstyle ':completion:*' ignore-parents parent pwd
 
 # History
 HISTFILE=$HOME/.config/zsh/.zhistory
@@ -135,9 +86,12 @@ catch_signal_usr1() {
 trap catch_signal_usr1 USR1
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+source <(antibody init)
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle zsh-users/zsh-autosuggestions
+antibody bundle zsh-users/zsh-history-substring-search
+antibody bundle romkatv/powerlevel10k
+antibody bundle softmoth/zsh-vim-mode
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
@@ -145,8 +99,12 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red')
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 
-# Powerlevel10k theme
-source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+MODE_CURSOR_VIINS="bar"
+MODE_CURSOR_REPLACE="underline"
+MODE_CURSOR_VICMD="block"
+MODE_CURSOR_SEARCH="underline"
+MODE_CURSOR_VISUAL="block"
+MODE_CURSOR_VLINE="block"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
