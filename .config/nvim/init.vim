@@ -20,6 +20,3 @@ vnoremap <C-d> "+d
 inoremap <C-v> <ESC>"+pa
 
 map <C-s> :w<space>
-
-" I-Beam cursor on Neovim exit
-autocmd VimLeave * set guicursor=a:ver35-blinkon0
