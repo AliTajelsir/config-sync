@@ -4,6 +4,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Aliases
+alias h=run-help
 alias vi=nvim
 alias ydl=youtube-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
@@ -12,22 +13,22 @@ alias trash=rmtrash
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rsync='rsync -ahv --progress'
+alias rs='rsync -ahv --progress'
 
 # Autocomplete
 autoload -Uz compinit
 compinit
 
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $HOME/.config/zsh/.zcompcache
 zstyle ':completion:*' ignore-parents parent pwd
 
 # History
 HISTFILE=$HOME/.config/zsh/.zhistory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 
 # Options
 setopt AUTO_CD
@@ -56,18 +57,6 @@ unsetopt EXTENDED_HISTORY
 
 setopt CORRECT
 
-# Help command
-autoload -Uz run-help
-unalias run-help 2>/dev/null
-
-autoload -Uz run-help-git
-autoload -Uz run-help-ip
-autoload -Uz run-help-openssl
-autoload -Uz run-help-p4
-autoload -Uz run-help-sudo
-autoload -Uz run-help-svk
-autoload -Uz run-help-svn
-
 # Plugins
 source <(antibody init)
 antibody bundle zsh-users/zsh-completions
@@ -92,4 +81,3 @@ MODE_CURSOR_VLINE="block"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-
