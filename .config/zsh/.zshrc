@@ -4,6 +4,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Aliases
+alias h=run-help
 alias -g '$= '
 alias sudo='sudo $'
 alias vi=nvim
@@ -18,7 +19,7 @@ alias locate='sudo updatedb && locate'
 alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rsync='rsync -ahv --progress'
+alias rs='rsync -ahv --progress'
 
 # Command not found handler
 source /usr/share/doc/pkgfile/command-not-found.zsh
@@ -32,12 +33,11 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=*
 zstyle ':completion:*' ignore-parents parent pwd
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion::complete:*' use-cache 1
-zstyle ':completion::complete:*' cache-path $HOME/.config/zsh/.zcompcache
 
 # History
 HISTFILE=$HOME/.config/zsh/.zhistory
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000000
+SAVEHIST=1000000000
 
 # Options
 setopt AUTO_CD
@@ -66,24 +66,8 @@ unsetopt EXTENDED_HISTORY
 
 setopt CORRECT
 
-# Help command
-autoload -Uz run-help
-unalias run-help 2>/dev/null
-
-autoload -Uz run-help-git
-autoload -Uz run-help-ip
-autoload -Uz run-help-openssl
-autoload -Uz run-help-p4
-autoload -Uz run-help-sudo
-autoload -Uz run-help-svk
-autoload -Uz run-help-svn
-
-# Trap SIGUSR1 and rehash after pacman update hook
-catch_signal_usr1() {
-  trap catch_signal_usr1 USR1
-  rehash
-}
-trap catch_signal_usr1 USR1
+# Trap SIGUSR1 and rehash
+trap 'rehash' USR1
 
 # Plugins
 source <(antibody init)
