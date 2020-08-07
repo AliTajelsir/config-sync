@@ -10,6 +10,9 @@ highlight LineNr ctermbg=252 ctermfg=000
 autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
 
+" Dictionary
+set dictionary+=$HOME/.config/nvim/en_US.dict
+
 " shortcuts
 noremap <A-/> :buffers<CR>:buffer<space>
 noremap <A-.> :bnext<CR>
@@ -19,5 +22,6 @@ vnoremap <C-c> "*y
 vnoremap <C-x> "*d
 inoremap <C-v> <C-r><C-o>*
 
-noremap <C-s> :w<space>
+noremap <C-s> :w<CR>
+noremap <C-A-s> :w<space>
 noremap <C-q> :q
