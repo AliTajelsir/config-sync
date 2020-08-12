@@ -5,9 +5,8 @@ fi
 
 # Aliases
 alias h=run-help
-alias -g '$= '
-alias sudo='sudo $'
 alias vi=nvim
+alias exa='exa -F --icons --group-directories-first'
 alias ydl=youtube-dl
 alias cdl='coursera-dl -ca "$(cat ~/.config/coursera-ca)"'
 alias edl=edx-dl
@@ -20,11 +19,13 @@ alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rs='rsync -ahv --progress'
+alias -g '$= '
+alias sudo='sudo $'
 
 # Command not found handler
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
-# Autocomplete
+# Completion
 autoload -Uz compinit
 compinit
 
