@@ -1,4 +1,4 @@
-echo 'Start syncing termux $HOME configurations'
+echo 'Syncing termux $HOME configurations'
 git clone --bare --single-branch --branch termux https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
 cfg () {
     /usr/bin/git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
