@@ -11,7 +11,7 @@ autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
 
 " Dictionary
-set dictionary+=/usr/share/dict/usa
+set dictionary+=/usr/share/dict/words
 
 " Shortcuts
 noremap <A-/> :buffers<CR>:buffer<space>
@@ -25,5 +25,5 @@ inoremap <C-v> <C-r><C-o>+
 noremap <F7> :setlocal spell spelllang=en_us<CR>
 noremap <F19> :setlocal nospell<CR>
 
-noremap <C-s> :w<space>
+noremap <C-s> :w<CR>
 noremap <C-q> :q
