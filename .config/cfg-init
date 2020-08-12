@@ -1,18 +1,17 @@
-echo 'Syncing termux $HOME configurations'
+echo 'Syncing $HOME configurations...'
 git clone --bare --single-branch --branch termux https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
 cfg () {
-    /usr/bin/git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
+    git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
-mkdir -p $HOME/.config-backup
 cfg checkout 2>/dev/null
 if [ $? = 0 ]; then
-  echo 'Syncing...';
+  echo 'Syncing...'
   else
-    echo 'Backuping pre-existing files and syncing...';
-    cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -i'{}' rsync -avR --remove-source-files '{}' $HOME/.config-backup
-fi;
+    echo 'Backuping pre-existing files and syncing...'
+    cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -i'{}' rsync -ahvR --remove-source-files '{}' $HOME/.config-backup
+fi
 cfg checkout
 if [ $? = 0 ]; then
   echo 'Syncing completed successfully'
-fi;
+fi
 cfg config --local status.showUntrackedFiles no
