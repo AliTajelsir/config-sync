@@ -6,6 +6,9 @@ set number
 set numberwidth=1
 highlight LineNr ctermbg=252 ctermfg=000
 
+" Tab
+set shiftwidth=4
+
 " Terminal
 autocmd TermOpen * setlocal nonumber
 autocmd TermOpen * startinsert
