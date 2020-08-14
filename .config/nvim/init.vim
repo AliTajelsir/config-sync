@@ -2,12 +2,11 @@
 set mouse=a
 
 " Number column
-set number
-set numberwidth=1
+set number numberwidth=1
 highlight LineNr ctermbg=252 ctermfg=000
 
 " Tab
-set shiftwidth=4
+set shiftwidth=2
 
 " Terminal
 autocmd TermOpen * setlocal nonumber
