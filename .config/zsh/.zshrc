@@ -20,6 +20,7 @@ alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rs='rsync -ahv --progress'
+alias kl='killall -KILL'
 alias -g '$= '
 alias sudo='sudo $'
 
@@ -27,7 +28,8 @@ alias sudo='sudo $'
 source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Directories
-setopt AUTO_CD AUTO_PUSHD PUSHD_IGNORE_DUPS
+setopt AUTO_CD AUTO_PUSHD
+setopt CD_SILENT PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_SILENT
 
 # Completion
 autoload -Uz compinit
@@ -44,11 +46,11 @@ setopt GLOB_DOTS
 
 # History
 HISTFILE=$HOME/.config/zsh/.zhistory
-HISTSIZE=1000000000
-SAVEHIST=1000000000
-setopt APPEND_HISTORY INC_APPEND_HISTORY SHARE_HISTORY
-setopt HIST_IGNORE_DUPS HIST_IGNORE_ALL_DUPS HIST_EXPIRE_DUPS_FIRST HIST_SAVE_NO_DUPS HIST_FIND_NO_DUPS
-setopt HIST_IGNORE_SPACE HIST_NO_STORE HIST_NO_FUNCTIONS
+HISTSIZE=11000
+SAVEHIST=10000
+setopt HIST_EXPIRE_DUPS_FIRST HIST_FIND_NO_DUPS HIST_IGNORE_ALL_DUPS HIST_SAVE_NO_DUPS
+setopt HIST_IGNORE_SPACE HIST_NO_FUNCTIONS HIST_NO_STORE HIST_REDUCE_BLANKS
+setopt HIST_VERIFY SHARE_HISTORY
 unsetopt EXTENDED_HISTORY
 
 # Input and Output
