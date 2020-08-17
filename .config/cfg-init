@@ -1,7 +1,7 @@
 echo 'Syncing $HOME configurations...'
 echo 'Installing needed packages...'
 pkg install git rsync zsh antibody -y
-git clone --bare --single-branch --branch termux https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
+git clone --bare --single-branch --branch termux https://gitlab.com/AliTajelsir/config-sync.git $HOME/.config-sync
 cfg () {
   git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
