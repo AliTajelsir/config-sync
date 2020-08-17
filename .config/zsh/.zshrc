@@ -6,15 +6,16 @@ fi
 # Aliases
 alias h=run-help
 alias vi=nvim
+alias exa='exa -F --group-directories-first'
 alias fd='fd -HI'
 alias ydl=youtube-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
-alias trash=rmtrash
-alias rm='rm -Iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rs='rsync -ahv --progress'
+alias rm='rm -Iv'
+alias rmt=rmtrash
 alias kl='killall -KILL'
 
 # Directories
@@ -58,7 +59,7 @@ antibody bundle romkatv/powerlevel10k
 antibody bundle softmoth/zsh-vim-mode
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=#ff9966')
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
