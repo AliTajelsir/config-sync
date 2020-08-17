@@ -1,4 +1,6 @@
---netrc
+--force-ipv4
 --external-downloader aria2c
 --output $HOME/Videos/YouTube/%(title)s.%(ext)s
---format bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]
+--format bestvideo[height<=1080][height>720][ext=webm]+bestaudio[ext=webm]/bestvideo[height<=?720][ext=webm]+bestaudio[ext=webm]
+--merge-output-format mkv
+--audio-format opus
