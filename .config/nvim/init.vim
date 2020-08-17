@@ -6,7 +6,7 @@ set number numberwidth=1
 highlight LineNr ctermbg=252 ctermfg=000
 
 " Tab
-set shiftwidth=2
+set tabstop=2 shiftwidth=2
 
 " Terminal
 autocmd TermOpen * setlocal nonumber
