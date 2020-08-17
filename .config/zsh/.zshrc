@@ -9,13 +9,13 @@ alias vi=nvim
 alias exa='exa -F --group-directories-first'
 alias fd='fd -HI'
 alias ydl=youtube-dl
+alias ydla='youtube-dl -x -f bestaudio[ext=webm]'
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rs='rsync -ahv --progress'
 alias rm='rm -Iv'
-alias rmt=rmtrash
 alias kl='killall -KILL'
 
 # Directories
