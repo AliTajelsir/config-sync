@@ -1,2 +1,3 @@
 --external-downloader aria2c
---netrc
+--output $HOME/Movies/YouTube/%(title)s.%(ext)s
+--format bestvideo[ext=mp4][height<=1080][height>720]+bestaudio[ext=m4a]/best[ext=mp4]
