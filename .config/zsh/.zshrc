@@ -9,17 +9,18 @@ alias vi=nvim
 alias exa='exa -F --icons --group-directories-first'
 alias fd='fd -HI'
 alias ydl=youtube-dl
+alias ydla='youtube-dl -x -f bestaudio[ext=webm]'
 alias cdl='coursera-dl -ca "$(cat ~/.config/coursera-ca)"'
 alias edl=edx-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
-alias rmt=rmtrash
 alias awiki=wiki-search-html
 alias locate='sudo updatedb && locate'
-alias rm='rm -iv'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rs='rsync -ahv --progress'
+alias rmt=rmtrash
+alias rm='rm -Iv'
 alias kl='killall -KILL'
 alias -g '$= '
 alias sudo='sudo $'
@@ -68,7 +69,7 @@ antibody bundle romkatv/powerlevel10k
 antibody bundle softmoth/zsh-vim-mode
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=#ff9966')
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
