@@ -15,15 +15,20 @@ alias edl=edx-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias ddimg='dd bs=4M status=progress oflag=sync'
 alias awiki=wiki-search-html
-alias locate='sudo updatedb && locate'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rs='rsync -ahv --progress'
 alias rmt=rmtrash
 alias rm='rm -Iv'
 alias kl='killall -KILL'
+alias pvc='protonvpn c --cc US'
+alias pvd='protonvpn d'
+alias pvs='protonvpn s'
 alias -g '$= '
 alias sudo='sudo $'
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
+alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
 
 # Command not found handler
 source /usr/share/doc/pkgfile/command-not-found.zsh
