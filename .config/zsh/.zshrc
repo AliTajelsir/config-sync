@@ -6,6 +6,7 @@ fi
 # Aliases
 alias h=run-help
 alias vi=nvim
+alias vim=nvim
 alias exa='exa -F --icons --group-directories-first'
 alias fd='fd -HI'
 alias ydl=youtube-dl
