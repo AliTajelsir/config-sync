@@ -1,6 +1,6 @@
 --force-ipv4
 --external-downloader aria2c
 --output $HOME/Movies/YouTube/%(title)s.%(ext)s
---format bestvideo[height<=1080][height>720][ext=webm]+bestaudio[ext=webm]/bestvideo[height<=?720][ext=webm]+bestaudio[ext=webm]
+--format bestvideo[height<=1080][height>720][ext=webm]+bestaudio[ext=webm]/bestvideo[height<=?720][ext=webm]+bestaudio[ext=webm]/bestvideo[height<=?1080]+bestaudio
 --merge-output-format mkv
 --audio-format opus
