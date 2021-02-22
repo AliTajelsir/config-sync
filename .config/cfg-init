@@ -1,20 +1,20 @@
 echo 'Syncing $HOME configurations...'
 echo 'Installing needed packages...'
 pkg install git rsync zsh antibody -y
-git clone --bare --single-branch --branch termux https://gitlab.com/AliTajelsir/config-sync.git $HOME/.config-sync
+git clone --bare --single-branch --branch termux https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
 cfg () {
-  git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
+	git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
 cfg checkout 2>/dev/null
 if [ $? = 0 ]; then
-  echo 'Syncing...'
-  else
-    echo 'Backing up pre-existing files and syncing...'
-    cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I'{}' rsync -ahvR --remove-source-files '{}' $HOME/.config-backup
+	echo 'Syncing...'
+	else
+		echo 'Backing up pre-existing files and syncing...'
+		cfg checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I'{}' rsync -ahvR --remove-source-files '{}' $HOME/.config-backup
 fi
 cfg checkout
 if [ $? = 0 ]; then
-  echo 'Syncing completed successfully'
+	echo 'Syncing completed successfully'
 fi
 cfg config --local status.showUntrackedFiles no
 chsh -s zsh
