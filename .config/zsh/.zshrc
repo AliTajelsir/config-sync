@@ -7,17 +7,17 @@ fi
 alias h=run-help
 alias vi=nvim
 alias exa='exa -F --group-directories-first'
-alias fd='fd -HI'
+alias fd='fd -HIL'
 alias ydl=youtube-dl
 alias ydla='youtube-dl -x -f bestaudio[ext=webm]'
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
-alias ddimg='dd bs=4M status=progress oflag=sync'
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rs='rsync -ahv --progress'
 alias rm='rm -Iv'
 alias kl='killall -KILL'
-
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
 # Directories
 setopt AUTO_CD AUTO_PUSHD
 setopt CD_SILENT PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_SILENT
@@ -46,9 +46,6 @@ unsetopt EXTENDED_HISTORY
 
 # Input and Output
 setopt CORRECT
-
-# Trap SIGUSR1 and rehash
-trap 'rehash' USR1
 
 # Plugins
 source <(antibody init)
