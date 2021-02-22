@@ -18,7 +18,7 @@ alias ddimg='dd bs=4M status=progress oflag=sync'
 alias awiki=wiki-search-html
 alias cp='cp -iv'
 alias mv='mv -iv'
-alias rs='rsync -ahv --progress'
+alias rs='rsync -ah --progress'
 alias rmt=rmtrash
 alias rm='rm -Iv'
 alias kl='killall -KILL'
