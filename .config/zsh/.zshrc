@@ -1,7 +1,6 @@
-# Enable Powerlevel10k instant prompt.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# Znap plugin manager
+zstyle ':znap:*' git-dir $ZDOTDIR/znap
+source $ZDOTDIR/znap/zsh-snap/znap.zsh
 
 # Aliases
 alias h=run-help
@@ -14,7 +13,6 @@ alias ydla='youtube-dl -x -f bestaudio[ext=webm]'
 alias cdl='coursera-dl -ca "$(cat ~/.config/coursera-ca)"'
 alias edl=edx-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
-alias ddimg='dd bs=4M status=progress oflag=sync'
 alias awiki=wiki-search-html
 alias cp='cp -iv'
 alias mv='mv -iv'
@@ -41,6 +39,7 @@ setopt CD_SILENT PUSHD_IGNORE_DUPS PUSHD_MINUS PUSHD_SILENT
 # Completion
 autoload -Uz compinit
 compinit
+znap source zsh-users/zsh-completions
 zstyle ':completion:*' menu select
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' ignore-parents parent pwd
@@ -66,20 +65,21 @@ setopt CORRECT
 # Trap SIGUSR1 and rehash
 trap 'rehash' USR1
 
-# Plugins
-source <(antibody init)
-antibody bundle zsh-users/zsh-syntax-highlighting
-antibody bundle zsh-users/zsh-autosuggestions
-antibody bundle zsh-users/zsh-history-substring-search
-antibody bundle romkatv/powerlevel10k
-antibody bundle softmoth/zsh-vim-mode
-
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
-
+# Autosuggestion
+znap source zsh-users/zsh-autosuggestions
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_USE_ASYNC=true
 
+# Syntax Highlighting
+znap source zsh-users/zsh-syntax-highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=216')
+
+# History Substring Search
+znap source zsh-users/zsh-history-substring-search
+
+# Vim Mode
+znap source softmoth/zsh-vim-mode
 MODE_CURSOR_VIINS="bar"
 MODE_CURSOR_REPLACE="underline"
 MODE_CURSOR_VICMD="block"
@@ -87,5 +87,6 @@ MODE_CURSOR_SEARCH="underline"
 MODE_CURSOR_VISUAL="block"
 MODE_CURSOR_VLINE="block"
 
-# Powerlevel10k theme
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+# Powerlevel10k
+znap source romkatv/powerlevel10k
+[[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
