@@ -1,5 +1,6 @@
 echo 'Syncing $HOME configurations...'
 git clone --bare --single-branch --branch master https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
+git clone --depth 1 https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh/znap/zsh-snap
 cfg () {
 	/usr/bin/git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
