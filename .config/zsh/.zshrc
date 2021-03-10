@@ -9,7 +9,7 @@ alias vim=nvim
 alias exa='exa -F --icons --group-directories-first'
 alias fd='fd -HI'
 alias ydl=youtube-dl
-alias ydla='youtube-dl -x -f bestaudio[ext=webm]'
+alias ydla='youtube-dl -x -f "bestaudio[ext=webm]"'
 alias cdl='coursera-dl -ca "$(cat ~/.config/coursera-ca)"'
 alias edl=edx-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
@@ -86,6 +86,9 @@ MODE_CURSOR_VICMD="block"
 MODE_CURSOR_SEARCH="underline"
 MODE_CURSOR_VISUAL="block"
 MODE_CURSOR_VLINE="block"
+
+# System clipboard 
+znap source kutsan/zsh-system-clipboard 
 
 # Powerlevel10k
 znap source romkatv/powerlevel10k
