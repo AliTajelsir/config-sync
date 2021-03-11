@@ -1,8 +1,8 @@
 echo 'Syncing $HOME configurations...'
 echo 'Installing needed packages...'
 pkg install git rsync zsh -y
-git clone --depth 1 https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh/znap/zsh-snap
 git clone --bare --single-branch --branch termux https://github.com/AliTajelsir/config-sync.git $HOME/.config-sync
+git clone https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh/znap/zsh-snap
 cfg () {
 	git --git-dir=$HOME/.config-sync/ --work-tree=$HOME $@
 }
