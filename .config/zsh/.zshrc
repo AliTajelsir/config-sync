@@ -32,6 +32,7 @@ zstyle ':completion:*' ignore-parents parent pwd
 zstyle ':completion::complete:*' gain-privileges 1
 zstyle ':completion::complete:*' use-cache 1
 setopt AUTO_LIST AUTO_MENU COMPLETE_IN_WORD GLOB_COMPLETE
+znap eval pip-completion 'pip completion --zsh'
 
 # Expansion and Globbing
 setopt GLOB_DOTS
