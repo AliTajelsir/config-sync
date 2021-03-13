@@ -10,8 +10,6 @@ alias exa='exa -F --icons --group-directories-first'
 alias fd='fd -HI'
 alias ydl=youtube-dl
 alias ydla='youtube-dl -x -f "bestaudio[ext=webm]"'
-alias cdl='coursera-dl -ca "$(cat ~/.config/coursera-ca)"'
-alias edl=edx-dl
 alias cfg='git --git-dir=$HOME/.config-sync/ --work-tree=$HOME'
 alias awiki=wiki-search-html
 alias cp='cp -iv'
@@ -51,7 +49,7 @@ setopt AUTO_LIST AUTO_MENU COMPLETE_IN_WORD GLOB_COMPLETE
 setopt GLOB_DOTS
 
 # History
-HISTFILE=$HOME/.config/zsh/.zhistory
+HISTFILE=$ZDOTDIR/.zhistory
 HISTSIZE=11000
 SAVEHIST=10000
 setopt HIST_EXPIRE_DUPS_FIRST HIST_FIND_NO_DUPS HIST_IGNORE_ALL_DUPS HIST_SAVE_NO_DUPS
