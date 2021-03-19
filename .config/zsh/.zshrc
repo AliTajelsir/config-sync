@@ -65,7 +65,6 @@ znap source romkatv/powerlevel10k
 # Command not found handler
 command_not_found_handler() {
 	local pkgs cmd="$1" files=()
-	printf 'zsh: command not found: %s' "$cmd" 
 	files=(${(f)"$(pacman -F --machinereadable -- "/usr/bin/${cmd}")"})
 	if (( ${#files[@]} )); then
 		printf '\r%s may be found in the following packages:\n' "$cmd"
@@ -79,8 +78,9 @@ command_not_found_handler() {
 			printf '  %s/%s %s: /%s\n' "$repo" "$package" "$version" "$file"
 		done
 	else
+		printf 'zsh: command not found: %s' "$cmd"
 		printf '\n'
-	fi
+	fi 1>&2
 	return 127
 }
 
