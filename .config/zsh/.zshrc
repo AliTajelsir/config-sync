@@ -1,3 +1,8 @@
+# Enable Powerlevel10k instant prompt
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Znap plugin manager
 zstyle ':znap:*' plugins-dir $ZDOTDIR/znap
 source $ZDOTDIR/znap/zsh-snap/znap.zsh
