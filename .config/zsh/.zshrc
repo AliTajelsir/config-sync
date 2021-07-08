@@ -92,6 +92,7 @@ command_not_found_handler() {
 # Aliases
 alias h=run-help
 alias exa='exa -F --icons --group-directories-first'
+alias ls=exa
 alias fd='fd -HI'
 alias ydl=youtube-dl
 alias ydla='youtube-dl -x -f "bestaudio[ext=webm]"'
@@ -111,3 +112,4 @@ alias sudo='sudo $'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 alias hwenc='ffmpeg -vaapi_device /dev/dri/renderD128'
+alias zup='znap status && znap pull'
